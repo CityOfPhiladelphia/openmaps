@@ -37,7 +37,7 @@ var GATEKEEPER_KEY = 'ec8681f792812d7e3ff15e9094bfd4ad';
 var WEBMAP_ID = '4c3ed877199c402895b7fa45ce6409b6';
 
 // WebMapViewer({
-openmaps.default({
+layerboard.default({
   router: {
     enabled: true
   },
