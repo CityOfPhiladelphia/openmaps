@@ -7,12 +7,6 @@ ________                           _____
         \/|__|        \/     \/         \/     \/|__|       \/
 */
 
-// styles
-// import 'leaflet-easybutton/src/easy-button.css';
-// import 'leaflet-measure/dist/leaflet-measure.css';
-//
-// import WebMapViewer from './main.js'
-
 // turn off console logging in production
 // TODO come up with better way of doing this with webpack + env vars
 const { hostname='' } = location;
@@ -36,7 +30,6 @@ var BASE_CONFIG_URL = 'https://rawgit.com/ajrothwell/openmaps-base-config/f7a091
 var GATEKEEPER_KEY = 'ec8681f792812d7e3ff15e9094bfd4ad';
 var WEBMAP_ID = '4c3ed877199c402895b7fa45ce6409b6';
 
-// WebMapViewer({
 layerboard.default({
   router: {
     enabled: true
