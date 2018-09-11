@@ -42,6 +42,13 @@ module.exports = {
       },
     ],
   },
+  externals: {
+    'leaflet': 'L',
+    'jQuery': '$',
+    moment: 'moment',
+    accounting: 'accounting',
+    axios: 'axios',
+  },
   plugins: [
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),
   ],
