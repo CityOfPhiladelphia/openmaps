@@ -25,7 +25,7 @@ if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
 
 function openHelp() {
   var firstHash = window.location.hash;
-  // console.log('setHash is running, firstHash:', firstHash);
+  console.log('setHash is running, firstHash:', firstHash);
   var firstHashArr = firstHash.split('/').slice(2);
   console.log('firstHashArr:', firstHashArr);
   var finalHash = '#/help';
