@@ -12,9 +12,6 @@ import axios from 'axios';
 import moment from 'moment';
 import layerboard from '@cityofphiladelphia/layerboard';
 
-
-// import '@fortawesome/fontawesome-pro/css/all.css';
-
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-easybutton/src/easy-button.css';
 import 'leaflet-measure/dist/leaflet-measure.css';
@@ -82,9 +79,4 @@ layerboard({
   webmapId: WEBMAP_ID,
   topics: [],
   modals: ['help'],
-  // modals: {
-  //   help: {
-  //     open: false
-  //   }
-  // },
 });
