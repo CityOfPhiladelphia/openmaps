@@ -12,10 +12,11 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server"
   },
   "dependencies": {
-    "@cityofphiladelphia/layerboard": "0.0.1",
+    "@cityofphiladelphia/layerboard": "https://github.com/CityOfPhiladelphia/layerboard#2d9bc6becc6b7da62604528c2b8c6f9a2a57b862",
     "accounting": "^0.4.1",
     "axios": "^0.18.0",
-    "moment": "^2.21.0"
+    "moment": "^2.21.0",
+    "phila-standards": "^1.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -24,8 +25,10 @@
     "cross-env": "^5.1.4",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
     "style-loader": "^0.20.3",
-    "webpack": "^4.2.0",
+    "webpack": "4.2.0",
     "webpack-cli": "^2.0.13",
     "webpack-dev-server": "^3.1.1",
     "webpack-serve": "^2.0.2"

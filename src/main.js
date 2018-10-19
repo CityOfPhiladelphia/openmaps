@@ -12,6 +12,9 @@ import axios from 'axios';
 import moment from 'moment';
 import layerboard from '@cityofphiladelphia/layerboard';
 
+
+// import '@fortawesome/fontawesome-pro/css/all.css';
+
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-easybutton/src/easy-button.css';
 import 'leaflet-measure/dist/leaflet-measure.css';
@@ -23,7 +26,9 @@ if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
   console.log = console.info = console.debug = console.error = function () {};
 }
 
-function openHelp() {
+console.log('test')
+window.openHelp = function(){
+// function openHelp() {
   var firstHash = window.location.hash;
   console.log('setHash is running, firstHash:', firstHash);
   var firstHashArr = firstHash.split('/').slice(2);
@@ -35,7 +40,7 @@ function openHelp() {
   window.location.hash = finalHash;
 }
 
-var BASE_CONFIG_URL = 'https://rawgit.com/ajrothwell/openmaps-base-config/f7a091508316694767f24fd68ab07af38ddad163/config.js';
+var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/ajrothwell/openmaps-base-config@ba14a53156e85ca8e655fc85cc83dd24d7323ef2/config.js';
 var GATEKEEPER_KEY = 'ec8681f792812d7e3ff15e9094bfd4ad';
 var WEBMAP_ID = '4c3ed877199c402895b7fa45ce6409b6';
 
@@ -75,4 +80,11 @@ layerboard({
   gatekeeperKey: GATEKEEPER_KEY,
   baseConfig: BASE_CONFIG_URL,
   webmapId: WEBMAP_ID,
+  topics: [],
+  modals: ['help'],
+  // modals: {
+  //   help: {
+  //     open: false
+  //   }
+  // },
 });
