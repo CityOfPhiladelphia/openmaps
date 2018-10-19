@@ -17,23 +17,14 @@
     <title>OpenMaps | phila.gov</title>
     <link rel="canonical" href="">
     <meta name="description" content="">
-    <link rel="shortcut icon" type="image/x-icon" href="http://standards.phila.gov/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://standards.phila.gov/img/favicon.png">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css">
-    <link rel="stylesheet" href="//unpkg.com/phila-standards@0.12.0/dist/css/phila-app.min.css">
-
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">
-
-    <link rel="stylesheet" href="//unpkg.com/leaflet@1.1.0/dist/leaflet.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//unpkg.com/phila-standards@1.0.0/dist/css/phila-app.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-9ralMzdK1QYsk4yBY680hmsb4/hJ98xK3w0TIaJ3ll4POWpWUYaA2bRjGGujGT8w" crossorigin="anonymous">
     <link rel="stylesheet" href="//unpkg.com/Leaflet.vector-markers@0.0.6/dist/leaflet-vector-markers.css">
-
-
-    <link rel="stylesheet" href="//unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.css">
-    <link rel="stylesheet" href="//s3.amazonaws.com/leaflet-measure-flatfiles/leaflet-measure.css">
-
-
+    <!-- <link rel="stylesheet" href="//s3.amazonaws.com/leaflet-measure-flatfiles/leaflet-measure-openmaps.css"> -->
     <link rel="stylesheet" href="styles.css">
   </head>
 
@@ -58,8 +49,8 @@
         </div>
       </header>
 
-      <!-- WebMapViewer -->
-      <div id="webmap-viewer"></div>
+      <!-- Layerboard -->
+      <div id="layerboard"></div>
 
       <!-- Footer -->
       <div class="app-footer">
@@ -84,32 +75,29 @@
 
     </div><!-- end of application div -->
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.5.7/vue.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/vuex/3.0.1/vuex.min.js"></script>
-    <script src="//unpkg.com/axios@0.16.2/dist/axios.min.js"></script>
-
-
     <!-- JS: Foundation -->
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.js"></script>
 
+    <!-- JS: Layerboard dependencies -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.5.7/vue.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/vuex/3.0.1/vuex.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="//unpkg.com/axios@0.16.2/dist/axios.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/accounting.js/0.4.1/accounting.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-
     <script src="//unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
     <script src="//unpkg.com/esri-leaflet@2.1.4"></script>
-
     <script src="//unpkg.com/Leaflet.vector-markers@0.0.6"></script>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/proj4js/2.4.4/proj4.js"></script>
     <script src="//unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.js"></script>
     <script src="//s3.amazonaws.com/leaflet-measure-flatfiles/leaflet-measure.js"></script>
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/proj4js/2.4.4/proj4.js"></script>
 
     <!-- Load Leaflet Label from GitHub -->
     <script src="https://leaflet.github.io/Leaflet.label/leaflet.label.js"></script>
     <!-- Load Leaflet Heat from CDN -->
-    <script src="https://cdn.rawgit.com/Leaflet/Leaflet.heat/gh-pages/dist/leaflet-heat.js"></script>
+    <!-- <script src="https://cdn.rawgit.com/Leaflet/Leaflet.heat/gh-pages/dist/leaflet-heat.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/Leaflet/Leaflet.heat@5885ec0ec2442876b67725c64dc537cb12c52c73/dist/leaflet-heat.js"></script>
     <!-- Load Heatmap Feature Layer from CDN -->
     <script src="https://cdn.jsdelivr.net/leaflet.esri.heatmap-feature-layer/2.0.0-beta.1/esri-leaflet-heatmap-feature-layer.js"></script>
     <!-- Load Esri Leaflet Renderers from CDN -->
@@ -119,9 +107,10 @@
     <!-- Load Leaflet Omnivore -->
     <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
 
-    <script src="//cdn.rawgit.com/hayeswise/Leaflet.PointInPolygon/v1.0.0/wise-leaflet-pip.js"></script>
-
-    <script src="//cdn.rawgit.com/CityOfPhiladelphia/L.esri.WebMap/5849bfa6248a886d8675eeff98fa9dff4949f12a/dist/esri-leaflet-webmap.js"></script>
+    <!-- <script src="//cdn.rawgit.com/hayeswise/Leaflet.PointInPolygon/v1.0.0/wise-leaflet-pip.js"></script> -->
+    <script src="//cdn.jsdelivr.net/gh/hayeswise/Leaflet.PointInPolygon@v1.0.0/wise-leaflet-pip.js"></script>
+    <!-- <script src="//cdn.rawgit.com/CityOfPhiladelphia/L.esri.WebMap/5849bfa6248a886d8675eeff98fa9dff4949f12a/dist/esri-leaflet-webmap.js"></script> -->
+    <script src="//cdn.jsdelivr.net/gh/CityOfPhiladelphia/L.esri.WebMap@5849bfa6248a886d8675eeff98fa9dff4949f12a/dist/esri-leaflet-webmap.js"></script>
 
     <!-- JS: Cyclomedia -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js"></script>
@@ -132,15 +121,12 @@
     <!-- JS: Pictometry (optional) -->
     <script src="//unpkg.com/blueimp-md5@2.10.0/js/md5.min.js"></script>
 
-    <!-- JS: Local -->
-    <script src="src/esri-leaflet-legend-compat-src-edit.js"></script>
+    <!-- <script src="//cdn.rawgit.com/ajrothwell/esri-leaflet-legend/2fca1eed2eda8b951ed21fe05350b79101e604a7/dist/esri-leaflet-legend-compat-src-edit.js"></script> -->
+    <script src="//cdn.jsdelivr.net/gh/ajrothwell/esri-leaflet-legend@2fca1eed2eda8b951ed21fe05350b79101e604a7/dist/esri-leaflet-legend-compat-src-edit.js"></script>
 
-    <script src="//unpkg.com/@cityofphiladelphia/phila-vue-datafetch@0.0.8/dist/phila-vue-datafetch.js"></script>
-    <script src="//cdn.rawgit.com/CityOfPhiladelphia/phila-vue-mapping/29f33d1df52cec8bac5c0ea0b9903ce673bd4a85/dist/phila-vue-mapping.js"></script>
-    <script src="//unpkg.com/@cityofphiladelphia/phila-vue-comps@0.0.9/dist/phila-vue-comps.js"></script>
-
-    <script src="//cdn.rawgit.com/CityOfPhiladelphia/openmaps/d54462ed809a9c0a01cbc62c30014b83011198fe/dist/openmaps.js"></script>
-    <script src="main.js"></script>
+    <script src="vendor.js"></script>
+    <script src="layerboard.js"></script>
+    <script src="app.js"></script>
 
   </body>
 </html>

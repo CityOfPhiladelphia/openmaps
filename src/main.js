@@ -7,11 +7,14 @@ ________                           _____
         \/|__|        \/     \/         \/     \/|__|       \/
 */
 
-// styles
-// import 'leaflet-easybutton/src/easy-button.css';
-// import 'leaflet-measure/dist/leaflet-measure.css';
-//
-// import WebMapViewer from './main.js'
+import accounting from 'accounting';
+import axios from 'axios';
+import moment from 'moment';
+import layerboard from '@cityofphiladelphia/layerboard';
+
+import 'leaflet/dist/leaflet.css';
+import 'leaflet-easybutton/src/easy-button.css';
+import 'leaflet-measure/dist/leaflet-measure.css';
 
 // turn off console logging in production
 // TODO come up with better way of doing this with webpack + env vars
@@ -20,9 +23,10 @@ if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
   console.log = console.info = console.debug = console.error = function () {};
 }
 
-function openHelp() {
+window.openHelp = function(){
+// function openHelp() {
   var firstHash = window.location.hash;
-  // console.log('setHash is running, firstHash:', firstHash);
+  console.log('setHash is running, firstHash:', firstHash);
   var firstHashArr = firstHash.split('/').slice(2);
   console.log('firstHashArr:', firstHashArr);
   var finalHash = '#/help';
@@ -32,12 +36,12 @@ function openHelp() {
   window.location.hash = finalHash;
 }
 
-var BASE_CONFIG_URL = 'https://rawgit.com/ajrothwell/openmaps-base-config/f7a091508316694767f24fd68ab07af38ddad163/config.js';
+var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/ajrothwell/openmaps-base-config@ba14a53156e85ca8e655fc85cc83dd24d7323ef2/config.js';
 var GATEKEEPER_KEY = 'ec8681f792812d7e3ff15e9094bfd4ad';
 var WEBMAP_ID = '4c3ed877199c402895b7fa45ce6409b6';
 
-// WebMapViewer({
-openmaps.default({
+layerboard({
+  bundled: true,
   router: {
     enabled: true
   },
@@ -72,4 +76,6 @@ openmaps.default({
   gatekeeperKey: GATEKEEPER_KEY,
   baseConfig: BASE_CONFIG_URL,
   webmapId: WEBMAP_ID,
+  topics: [],
+  modals: ['help'],
 });
