@@ -23,7 +23,6 @@ if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
   console.log = console.info = console.debug = console.error = function () {};
 }
 
-console.log('test')
 window.openHelp = function(){
 // function openHelp() {
   var firstHash = window.location.hash;

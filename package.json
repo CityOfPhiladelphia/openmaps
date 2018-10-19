@@ -12,7 +12,7 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server"
   },
   "dependencies": {
-    "@cityofphiladelphia/layerboard": "https://github.com/CityOfPhiladelphia/layerboard#2d9bc6becc6b7da62604528c2b8c6f9a2a57b862",
+    "@cityofphiladelphia/layerboard": "0.0.2",
     "accounting": "^0.4.1",
     "axios": "^0.18.0",
     "moment": "^2.21.0",
