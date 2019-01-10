@@ -41,7 +41,7 @@ window.openHelp = function(){
 
 var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/ajrothwell/openmaps-base-config@ba14a53156e85ca8e655fc85cc83dd24d7323ef2/config.js';
 var GATEKEEPER_KEY = 'ec8681f792812d7e3ff15e9094bfd4ad';
-var WEBMAP_ID = '4c3ed877199c402895b7fa45ce6409b6';
+var WEBMAP_ID = '1596df70df0349e293ceec46a06ccc50';
 
 layerboard({
   bundled: true,
