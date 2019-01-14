@@ -12,7 +12,7 @@ ________                           _____
 
 import accounting from 'accounting';
 import axios from 'axios';
-import moment from 'moment';
+// import moment from 'moment';
 import layerboard from '@cityofphiladelphia/layerboard';
 
 import 'leaflet/dist/leaflet.css';
