@@ -10,9 +10,7 @@ ________                           _____
 // import * as Sentry from '@sentry/browser';
 // Sentry.init({ dsn: 'https://ba45a0a61b464a2e9f55c5fd55e209d6@sentry.io/1332677' });
 
-import accounting from 'accounting';
 import axios from 'axios';
-// import moment from 'moment';
 import layerboard from '@cityofphiladelphia/layerboard';
 
 import 'leaflet/dist/leaflet.css';

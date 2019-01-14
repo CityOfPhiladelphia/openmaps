@@ -545,13 +545,13 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@cityofphiladelphia/layerboard@https://github.com/CityOfPhiladelphia/layerboard#19c3ac1aa37b88ff083f3eab051d7e1e4a71ed53":
+"@cityofphiladelphia/layerboard@https://github.com/CityOfPhiladelphia/layerboard#5348adf443a3dc49105f9e9c61c4fde99029daa6":
   version "0.0.4"
-  resolved "https://github.com/CityOfPhiladelphia/layerboard#19c3ac1aa37b88ff083f3eab051d7e1e4a71ed53"
+  resolved "https://github.com/CityOfPhiladelphia/layerboard#5348adf443a3dc49105f9e9c61c4fde99029daa6"
   dependencies:
-    "@cityofphiladelphia/phila-vue-comps" "https://github.com/CityOfPhiladelphia/phila-vue-comps#6e9d7cd139fe95fd3ceff428b9d9da1951f5b094"
-    "@cityofphiladelphia/phila-vue-datafetch" "https://github.com/CityOfPhiladelphia/phila-vue-datafetch#bc26343e12c2bb9e832cb810699c9191257d0fbc"
-    "@cityofphiladelphia/phila-vue-mapping" "https://github.com/CityOfPhiladelphia/phila-vue-mapping#2f0e09d9ed7e94d48a5d63d5097a3c71d9566611"
+    "@cityofphiladelphia/phila-vue-comps" "https://github.com/CityOfPhiladelphia/phila-vue-comps#4781a1e268bee5c255baafdebefb2f13b48a2ba3"
+    "@cityofphiladelphia/phila-vue-datafetch" "https://github.com/CityOfPhiladelphia/phila-vue-datafetch#41f6ee45b15752457ef129e87d8338770c5c0278"
+    "@cityofphiladelphia/phila-vue-mapping" "https://github.com/CityOfPhiladelphia/phila-vue-mapping#68dadec067b1a48a24c25e1fbdcd39354bc75673"
     "@fortawesome/fontawesome-svg-core" "^1.2.5"
     "@fortawesome/pro-light-svg-icons" "^5.6.3"
     "@fortawesome/pro-regular-svg-icons" "^5.6.3"
@@ -569,15 +569,14 @@
     leaflet-measure "https://github.com/CityOfPhiladelphia/leaflet-measure#b70886af342f19597dc2937d79d64bad6bab07c6"
     leaflet-rotatedmarker "^0.2.0"
     leaflet-vector-icon "https://github.com/CityOfPhiladelphia/leaflet-vector-icon#1836076bc5ede54ae2618f1e5f6d9df10769a001"
-    phila-standards "^1.0.0"
-    proj4 "^2.4.4"
-    vue "^2.5.16"
+    phila-standards "^1.0.2"
+    vue "^2.5.22"
     vue-router "^3.0.1"
     vuex "^3.0.1"
 
-"@cityofphiladelphia/phila-vue-comps@https://github.com/CityOfPhiladelphia/phila-vue-comps#6e9d7cd139fe95fd3ceff428b9d9da1951f5b094":
+"@cityofphiladelphia/phila-vue-comps@https://github.com/CityOfPhiladelphia/phila-vue-comps#4781a1e268bee5c255baafdebefb2f13b48a2ba3":
   version "1.0.14"
-  resolved "https://github.com/CityOfPhiladelphia/phila-vue-comps#6e9d7cd139fe95fd3ceff428b9d9da1951f5b094"
+  resolved "https://github.com/CityOfPhiladelphia/phila-vue-comps#4781a1e268bee5c255baafdebefb2f13b48a2ba3"
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.8"
     "@fortawesome/pro-light-svg-icons" "^5.5.0"
@@ -590,13 +589,13 @@
     jspdf "^1.4.1"
     jspdf-autotable "^2.3.5"
     lodash.debounce "^4.0.8"
-    phila-standards "^1.0.0"
-    vue "^2.5.16"
+    phila-standards "^1.0.2"
+    vue "^2.5.22"
     vuex "^3.0.1"
 
-"@cityofphiladelphia/phila-vue-datafetch@https://github.com/CityOfPhiladelphia/phila-vue-datafetch#bc26343e12c2bb9e832cb810699c9191257d0fbc":
+"@cityofphiladelphia/phila-vue-datafetch@https://github.com/CityOfPhiladelphia/phila-vue-datafetch#41f6ee45b15752457ef129e87d8338770c5c0278":
   version "0.0.12"
-  resolved "https://github.com/CityOfPhiladelphia/phila-vue-datafetch#bc26343e12c2bb9e832cb810699c9191257d0fbc"
+  resolved "https://github.com/CityOfPhiladelphia/phila-vue-datafetch#41f6ee45b15752457ef129e87d8338770c5c0278"
   dependencies:
     "@turf/turf" "^5.1.6"
     axios "^0.18.0"
@@ -604,13 +603,13 @@
     esri-leaflet "^2.2.3"
     leaflet "^1.4.0"
     lodash.debounce "^4.0.8"
-    proj4 "^2.4.4"
-    vue "^2.5.16"
+    proj4 "^2.5.0"
+    vue "^2.5.22"
     vuex "^3.0.1"
 
-"@cityofphiladelphia/phila-vue-mapping@https://github.com/CityOfPhiladelphia/phila-vue-mapping#2f0e09d9ed7e94d48a5d63d5097a3c71d9566611":
+"@cityofphiladelphia/phila-vue-mapping@https://github.com/CityOfPhiladelphia/phila-vue-mapping#68dadec067b1a48a24c25e1fbdcd39354bc75673":
   version "1.0.11"
-  resolved "https://github.com/CityOfPhiladelphia/phila-vue-mapping#2f0e09d9ed7e94d48a5d63d5097a3c71d9566611"
+  resolved "https://github.com/CityOfPhiladelphia/phila-vue-mapping#68dadec067b1a48a24c25e1fbdcd39354bc75673"
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.8"
     "@fortawesome/pro-light-svg-icons" "^5.5.0"
@@ -632,8 +631,8 @@
     leaflet-rotatedmarker "^0.2.0"
     leaflet-vector-icon "https://github.com/CityOfPhiladelphia/leaflet-vector-icon#74a56f048bceccef9c945f752bbd0379ae9dc77c"
     lodash.debounce "^4.0.8"
-    phila-standards "^1.0.0"
-    proj4 "^2.4.4"
+    phila-standards "^1.0.2"
+    proj4 "^2.5.0"
     vue "^2.5.22"
     vuex "^3.0.1"
 
@@ -7107,7 +7106,7 @@ mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkd
   dependencies:
     minimist "0.0.8"
 
-moment@^2.18.1, moment@^2.21.0:
+moment@^2.18.1:
   version "2.23.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.23.0.tgz#759ea491ac97d54bac5ad776996e2a58cc1bc225"
 
@@ -7860,7 +7859,7 @@ performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
 
-phila-standards@^1.0.0:
+phila-standards@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/phila-standards/-/phila-standards-1.0.2.tgz#07dc375ef7c290fd330320f04c2dd3e303ad69e1"
   dependencies:
@@ -8233,7 +8232,7 @@ process@^0.11.10:
   version "0.11.10"
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
 
-proj4@^2.4.4:
+proj4@^2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/proj4/-/proj4-2.5.0.tgz#e3a88ce7e7a07221aaccbc6760dd2eafee745f03"
   dependencies:
@@ -10185,7 +10184,7 @@ vue-router@^3.0.1:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.0.2.tgz#dedc67afe6c4e2bc25682c8b1c2a8c0d7c7e56be"
 
-vue@^2.5.16, vue@^2.5.22:
+vue@^2.5.22:
   version "2.5.22"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.22.tgz#3bf88041af08b8539c37b268b70ca79245e9cc30"
 
