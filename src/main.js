@@ -51,8 +51,13 @@ layerboard({
   geolocation: {
     enabled: true
   },
-  addressAutocomplete: {
-    enabled: true
+  addressInput: {
+    width: 415,
+    mapWidth: 300,
+    position: 'right',
+    autocompleteEnabled: false,
+    autocompleteMax: 15,
+    placeholder: 'Search the map',
   },
   map: {
     // possibly should move to base config
