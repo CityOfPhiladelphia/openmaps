@@ -15,7 +15,7 @@ module.exports = {
   },
   devtool: isDevelopment ? 'inline-source-map' : 'source-map',
   devServer: {
-    contentBase: './public',
+    contentBase: './dist',
     // host: process.env.WEBPACK_DEV_HOST,
     host: 'localhost',
     // port: process.env.WEBPACK_DEV_PORT
