@@ -11,7 +11,7 @@ ________                           _____
 // Sentry.init({ dsn: 'https://ba45a0a61b464a2e9f55c5fd55e209d6@sentry.io/1332677' });
 
 import axios from 'axios';
-import layerboard from '@cityofphiladelphia/layerboard';
+import layerboard from '@philly/layerboard';
 
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-easybutton/src/easy-button.css';

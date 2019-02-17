@@ -545,18 +545,57 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@cityofphiladelphia/layerboard@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@cityofphiladelphia/layerboard/-/layerboard-0.0.7.tgz#6713ce50e357434f5b5c06bc0bf7b0ac592088b2"
+"@esri/arcgis-to-geojson-utils@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@esri/arcgis-to-geojson-utils/-/arcgis-to-geojson-utils-1.3.0.tgz#79ab65bf3e40c039dbdebceff4b3b0ec088b189c"
+
+"@fortawesome/fontawesome-common-types@^0.2.15":
+  version "0.2.15"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.15.tgz#16af950653083d1e3064061de9f8e5e3b579f688"
+  integrity sha512-ATBRyKJw1d2ko+0DWN9+BXau0EK3I/Q6pPzPv3LhJD7r052YFAkAdfb1Bd7ZqhBsJrdse/S7jKxWUOZ61qBD4g==
+
+"@fortawesome/fontawesome-pro@^5.4.0":
+  version "5.6.3"
+  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-pro/-/fontawesome-pro-5.6.3.tgz#f45b1573735e9a0bd75a1334fdf710e979708316"
+
+"@fortawesome/fontawesome-svg-core@^1.2.15":
+  version "1.2.15"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.15.tgz#368f9fc7e8e8d8636495dc7483f97510f920ba97"
+  integrity sha512-M/sHyl4g2VBtKYkay1Z+XImMyTVcaBPmehYtPw4HKD9zg2E7eovB7Yx98aUfZjPbroGqa+IL4/+KhWBMOGlHIQ==
   dependencies:
-    "@cityofphiladelphia/phila-vue-comps" "^1.0.15"
-    "@cityofphiladelphia/phila-vue-datafetch" "^0.0.13"
-    "@cityofphiladelphia/phila-vue-mapping" "^1.0.13"
-    "@fortawesome/fontawesome-svg-core" "^1.2.8"
-    "@fortawesome/pro-light-svg-icons" "^5.6.3"
-    "@fortawesome/pro-regular-svg-icons" "^5.6.3"
-    "@fortawesome/pro-solid-svg-icons" "^5.6.3"
-    "@fortawesome/vue-fontawesome" "^0.1.2"
+    "@fortawesome/fontawesome-common-types" "^0.2.15"
+
+"@fortawesome/free-solid-svg-icons@^5.7.2":
+  version "5.7.2"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.7.2.tgz#9ec2ed353d630092a8e19cc8aae2f716572963e5"
+  integrity sha512-iujcXMyAvIbWM8W3jkOLpvJbR+rPpdN1QyqhZeJaLRdHPH4JmuovIAYP4vx5Sa1csZVXfRD1eDWqVZ/jGM620A==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.15"
+
+"@fortawesome/vue-fontawesome@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@fortawesome/vue-fontawesome/-/vue-fontawesome-0.1.5.tgz#ea70a4d4ad0d6d617048a5b2a2ff33e21fe47d61"
+  integrity sha512-tiNZCgh+ZkUsyFfm2MQMMdHKRrKj82M7g0XFPSNNY+s5nRB82soy0US+xj0jGRy433b0c4WpylCOhgle3294Uw==
+
+"@mrmlnc/readdir-enhanced@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
+  dependencies:
+    call-me-maybe "^1.0.1"
+    glob-to-regexp "^0.3.0"
+
+"@nodelib/fs.stat@^1.1.2":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
+
+"@philly/layerboard@^0.0.9":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@philly/layerboard/-/layerboard-0.0.9.tgz#8b591c39a993da3009fc6d8fd183d138115c0f05"
+  integrity sha512-BCFpUNQNkGKB2F+c/I7IpoapoBbDE2qyqRtXMJcgDbpnFc1e2f0PfLLB0Fch1akAxzVqrDwjCebzvYieFA/HEQ==
+  dependencies:
+    "@philly/vue-comps" "^1.0.19"
+    "@philly/vue-datafetch" "^0.0.13"
+    "@philly/vue-mapping" "^1.0.17"
     L-esri-WebMap "https://github.com/CityOfPhiladelphia/L.esri.WebMap#5849bfa6248a886d8675eeff98fa9dff4949f12a"
     accounting "^0.4.1"
     axios "^0.18.0"
@@ -574,15 +613,14 @@
     vue-router "^3.0.1"
     vuex "^3.0.1"
 
-"@cityofphiladelphia/phila-vue-comps@^1.0.15":
-  version "1.0.15"
-  resolved "https://registry.yarnpkg.com/@cityofphiladelphia/phila-vue-comps/-/phila-vue-comps-1.0.15.tgz#cb5cfa30d10f928948e40b100db9c8c3ba78a3e5"
+"@philly/vue-comps@^1.0.19":
+  version "1.0.19"
+  resolved "https://registry.yarnpkg.com/@philly/vue-comps/-/vue-comps-1.0.19.tgz#544d561854b58fe26a068b481f2e484ea0aa7e98"
+  integrity sha512-EMaF8KmZ6LizUOHD/+EavIj8oMtYj5IM+CEppaNovrdE0rHZHdnVWycw5373Xf0OBmoQbpw5ZxHIKC3kK66PaA==
   dependencies:
-    "@fortawesome/fontawesome-svg-core" "^1.2.8"
-    "@fortawesome/pro-light-svg-icons" "^5.5.0"
-    "@fortawesome/pro-regular-svg-icons" "^5.5.0"
-    "@fortawesome/pro-solid-svg-icons" "^5.5.0"
-    "@fortawesome/vue-fontawesome" "^0.1.2"
+    "@fortawesome/fontawesome-svg-core" "^1.2.15"
+    "@fortawesome/free-solid-svg-icons" "^5.7.2"
+    "@fortawesome/vue-fontawesome" "^0.1.5"
     axios "^0.18.0"
     date-fns "^1.30.1"
     escape-html "^1.0.3"
@@ -593,9 +631,10 @@
     vue "^2.5.22"
     vuex "^3.0.1"
 
-"@cityofphiladelphia/phila-vue-datafetch@^0.0.13":
+"@philly/vue-datafetch@^0.0.13":
   version "0.0.13"
-  resolved "https://registry.yarnpkg.com/@cityofphiladelphia/phila-vue-datafetch/-/phila-vue-datafetch-0.0.13.tgz#f791952ed6ebc2729e946d2cbf0d1b608aa69afa"
+  resolved "https://registry.yarnpkg.com/@philly/vue-datafetch/-/vue-datafetch-0.0.13.tgz#cc2a1ad8837eff1da04089607556f1ff33fd7853"
+  integrity sha512-QtcXmIPFeQ80wYn5NqahsCmT1XsPRU9gkIx7W8wz4+/p9n0L9/Ujws5hme7Mb1C6f+ULGSdZ9dybiHbr/0uAbw==
   dependencies:
     "@turf/turf" "^5.1.6"
     axios "^0.18.0"
@@ -607,15 +646,14 @@
     vue "^2.5.22"
     vuex "^3.0.1"
 
-"@cityofphiladelphia/phila-vue-mapping@^1.0.13":
-  version "1.0.13"
-  resolved "https://registry.yarnpkg.com/@cityofphiladelphia/phila-vue-mapping/-/phila-vue-mapping-1.0.13.tgz#29411cc30450ef1502dbc740ff83c70a0c40a43d"
+"@philly/vue-mapping@^1.0.17":
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/@philly/vue-mapping/-/vue-mapping-1.0.17.tgz#26d23fa122422183cd762cd66b8393b65aa174ec"
+  integrity sha512-YQsuCLQ8A5CpKZh3VaY6IN73PKZ8Sge1KaaaBg7LcRPCfMbsJIe4KDifPMrA5TCntrD67l8I8TwwBtjvyBfRXQ==
   dependencies:
-    "@fortawesome/fontawesome-svg-core" "^1.2.8"
-    "@fortawesome/pro-light-svg-icons" "^5.5.0"
-    "@fortawesome/pro-regular-svg-icons" "^5.5.0"
-    "@fortawesome/pro-solid-svg-icons" "^5.5.0"
-    "@fortawesome/vue-fontawesome" "^0.1.2"
+    "@fortawesome/fontawesome-svg-core" "^1.2.15"
+    "@fortawesome/free-solid-svg-icons" "^5.7.2"
+    "@fortawesome/vue-fontawesome" "^0.1.5"
     "@turf/turf" "^5.1.6"
     L-esri-WebMap "https://github.com/CityOfPhiladelphia/L.esri.WebMap#5849bfa6248a886d8675eeff98fa9dff4949f12a"
     Leaflet.vector-markers "^0.0.6"
@@ -635,57 +673,6 @@
     proj4 "^2.5.0"
     vue "^2.5.22"
     vuex "^3.0.1"
-
-"@esri/arcgis-to-geojson-utils@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@esri/arcgis-to-geojson-utils/-/arcgis-to-geojson-utils-1.3.0.tgz#79ab65bf3e40c039dbdebceff4b3b0ec088b189c"
-
-"@fortawesome/fontawesome-common-types@^0.2.12":
-  version "0.2.12"
-  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.12.tgz#42baa71f97ca06faeb0b6718fa5ed20c5eefdf07"
-
-"@fortawesome/fontawesome-pro@^5.4.0":
-  version "5.6.3"
-  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-pro/-/fontawesome-pro-5.6.3.tgz#f45b1573735e9a0bd75a1334fdf710e979708316"
-
-"@fortawesome/fontawesome-svg-core@^1.2.8":
-  version "1.2.12"
-  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.12.tgz#9732617b1e484435f6946645d7f9ad248f12c437"
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.12"
-
-"@fortawesome/pro-light-svg-icons@^5.5.0", "@fortawesome/pro-light-svg-icons@^5.6.3":
-  version "5.6.3"
-  resolved "https://npm.fontawesome.com/@fortawesome/pro-light-svg-icons/-/pro-light-svg-icons-5.6.3.tgz#0c39b10ab0dda7dc68db4ad04d01b84c2e526659"
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.12"
-
-"@fortawesome/pro-regular-svg-icons@^5.5.0", "@fortawesome/pro-regular-svg-icons@^5.6.3":
-  version "5.6.3"
-  resolved "https://npm.fontawesome.com/@fortawesome/pro-regular-svg-icons/-/pro-regular-svg-icons-5.6.3.tgz#bc4a855f44d857d5bac181a6142390f6c3d9c4ba"
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.12"
-
-"@fortawesome/pro-solid-svg-icons@^5.5.0", "@fortawesome/pro-solid-svg-icons@^5.6.3":
-  version "5.6.3"
-  resolved "https://npm.fontawesome.com/@fortawesome/pro-solid-svg-icons/-/pro-solid-svg-icons-5.6.3.tgz#4ab7152119adf890ac4781ec48d968304fee91a6"
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.12"
-
-"@fortawesome/vue-fontawesome@^0.1.2":
-  version "0.1.5"
-  resolved "https://npm.fontawesome.com/@fortawesome/vue-fontawesome/-/vue-fontawesome-0.1.5.tgz#ea70a4d4ad0d6d617048a5b2a2ff33e21fe47d61"
-
-"@mrmlnc/readdir-enhanced@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
-  dependencies:
-    call-me-maybe "^1.0.1"
-    glob-to-regexp "^0.3.0"
-
-"@nodelib/fs.stat@^1.1.2":
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
@@ -1859,7 +1846,6 @@
 
 "L-esri-WebMap@git+https://github.com/CityOfPhiladelphia/L.esri.WebMap.git#5849bfa6248a886d8675eeff98fa9dff4949f12a":
   version "0.4.0"
-  uid "5849bfa6248a886d8675eeff98fa9dff4949f12a"
   resolved "git+https://github.com/CityOfPhiladelphia/L.esri.WebMap.git#5849bfa6248a886d8675eeff98fa9dff4949f12a"
   dependencies:
     arcgis-to-geojson-utils "^1.0.1"
@@ -6413,7 +6399,6 @@ leaflet-easybutton@^2.2.2, leaflet-easybutton@^2.3.0:
 
 "leaflet-measure@git+https://github.com/CityOfPhiladelphia/leaflet-measure.git#b70886af342f19597dc2937d79d64bad6bab07c6":
   version "4.0.0"
-  uid b70886af342f19597dc2937d79d64bad6bab07c6
   resolved "git+https://github.com/CityOfPhiladelphia/leaflet-measure.git#b70886af342f19597dc2937d79d64bad6bab07c6"
   dependencies:
     "@turf/area" "^5.1.5"
