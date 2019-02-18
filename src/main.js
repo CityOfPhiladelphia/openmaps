@@ -10,8 +10,16 @@ ________                           _____
 // import * as Sentry from '@sentry/browser';
 // Sentry.init({ dsn: 'https://ba45a0a61b464a2e9f55c5fd55e209d6@sentry.io/1332677' });
 
+import Vue from 'vue';
+Vue.config.devtools = true;
+
+import * as esri from 'esri-leaflet'
+console.log('esri:', esri)
+L.esri = esri;
+
 import axios from 'axios';
-import layerboard from '@cityofphiladelphia/layerboard';
+import layerboard from '@philly/layerboard';
+// import layerboard from '@philly/layerboard/src/main.js';
 
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-easybutton/src/easy-button.css';
@@ -49,7 +57,8 @@ layerboard({
     enabled: true
   },
   geolocation: {
-    enabled: true
+    enabled: true,
+    icon: ['far', 'dot-circle']
   },
   addressInput: {
     width: 415,
