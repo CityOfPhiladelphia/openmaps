@@ -10,6 +10,12 @@ ________                           _____
 // import * as Sentry from '@sentry/browser';
 // Sentry.init({ dsn: 'https://ba45a0a61b464a2e9f55c5fd55e209d6@sentry.io/1332677' });
 
+
+// Font Awesome Icons
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faDotCircle} from '@fortawesome/free-regular-svg-icons/faDotCircle';
+library.add(faDotCircle);
+
 import axios from 'axios';
 import layerboard from '@philly/layerboard';
 
@@ -49,7 +55,8 @@ layerboard({
     enabled: true
   },
   geolocation: {
-    enabled: true
+    enabled: true,
+    icon: ['far', 'dot-circle']
   },
   addressInput: {
     width: 415,

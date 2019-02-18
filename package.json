@@ -12,7 +12,7 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server"
   },
   "dependencies": {
-    "@philly/layerboard": "^0.0.9",
+    "@philly/layerboard": "^0.0.11",
     "@sentry/browser": "4.3.4",
     "axios": "^0.18.0",
     "phila-standards": "^1.0.2"
