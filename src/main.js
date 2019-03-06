@@ -17,9 +17,14 @@ import * as esri from 'esri-leaflet'
 console.log('esri:', esri)
 L.esri = esri;
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faSquare } from '@fortawesome/free-solid-svg-icons/faSquare';
+library.add(faSquare);
+
 import axios from 'axios';
-import layerboard from '@philly/layerboard';
-// import layerboard from '@philly/layerboard/src/main.js';
+// import layerboard from '@philly/layerboard';
+import layerboard from '@philly/layerboard/src/main.js';
+console.log('layerboard:', layerboard);
 
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-easybutton/src/easy-button.css';
@@ -83,7 +88,7 @@ layerboard({
     containerClass: 'map-container-type2',
   },
   cyclomedia: {
-    enabled: true,
+    enabled: false,
     measurementAllowed: false,
     popoutAble: true,
   },
