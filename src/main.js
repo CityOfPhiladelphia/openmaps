@@ -13,9 +13,13 @@ ________                           _____
 import Vue from 'vue';
 Vue.config.devtools = true;
 
-import * as esri from 'esri-leaflet'
-console.log('esri:', esri)
+import * as esri from 'esri-leaflet';
 L.esri = esri;
+import * as rend from 'esri-leaflet-renderers';
+L.esri.Renderers = rend;
+import 'esri-leaflet-legend/dist/esri-leaflet-legend-compat-src-edit.js';
+import 'Leaflet-PointInPolygon/wise-leaflet-pip.js';
+import '@mapbox/leaflet-omnivore/leaflet-omnivore.min.js';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSquare } from '@fortawesome/free-solid-svg-icons/faSquare';
@@ -88,7 +92,7 @@ layerboard({
     containerClass: 'map-container-type2',
   },
   cyclomedia: {
-    enabled: false,
+    enabled: true,
     measurementAllowed: false,
     popoutAble: true,
   },

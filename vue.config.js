@@ -18,10 +18,10 @@ module.exports = {
   },
   transpileDependencies: [
     // can be string or regex
-    '@cityofphiladelphia/mapboard',
-    '@cityofphiladelphia/phila-vue-comps',
-    '@cityofphiladelphia/phila-vue-mapping',
-    '@cityofphiladelphia/phila-vue-datafetch'
+    '@philly/layerboard',
+    '@philly/vue-comps',
+    '@philly/vue-mapping',
+    '@philly/vue-datafetch'
     // 'L-esri-WebMap'
     // /other-dep/
   ]
