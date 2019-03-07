@@ -8,9 +8,6 @@ module.exports = {
     plugins: [
       new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),
       new Visualizer({ filename: './statistics.html' })
-      // new webpack.ProvidePlugin({
-      //   'L.esri': 'esri-leaflet'
-      // })
     ],
   },
   chainWebpack: (config) => {

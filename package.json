@@ -16,6 +16,7 @@
     "@philly/layerboard": "https://github.com/CityOfPhiladelphia/layerboard#094f4f3ed59d22e04bc35de6a5bd5e0d488a4439",
     "@sentry/browser": "4.3.4",
     "axios": "^0.18.0",
+    "moment": "^2.24.0",
     "phila-standards": "^1.0.2",
     "vue": "^2.6.8"
   },

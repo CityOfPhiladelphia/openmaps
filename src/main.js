@@ -28,7 +28,6 @@ library.add(faSquare);
 import axios from 'axios';
 // import layerboard from '@philly/layerboard';
 import layerboard from '@philly/layerboard/src/main.js';
-console.log('layerboard:', layerboard);
 
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-easybutton/src/easy-button.css';
