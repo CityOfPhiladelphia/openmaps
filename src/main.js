@@ -13,6 +13,10 @@ ________                           _____
 import Vue from 'vue';
 Vue.config.devtools = true;
 
+// import * as datefns from 'date-fns';
+// var test = datefns.format(1552067696, 'MM/DD/YYYY')
+// console.log('datefns:', datefns, 'datefns.format:', datefns.format, 'test:', test);
+
 import * as esri from 'esri-leaflet';
 L.esri = esri;
 import * as rend from 'esri-leaflet-renderers';
