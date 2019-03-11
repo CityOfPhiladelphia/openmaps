@@ -9,6 +9,11 @@ module.exports = {
       new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),
       new Visualizer({ filename: './statistics.html' })
     ],
+    resolve: {
+      alias: {
+        "leaflet": path.resolve(__dirname, 'node_modules/leaflet')
+      }
+    }
   },
   chainWebpack: (config) => {
     config.plugins.delete('prefetch')
