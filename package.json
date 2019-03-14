@@ -13,17 +13,17 @@
     "dev-build": "vue-cli-service build --mode development"
   },
   "dependencies": {
-    "@philly/layerboard": "https://github.com/CityOfPhiladelphia/layerboard#dc568d84a0c302c8ff594fa01397fe9dad8ef3bb",
+    "@philly/layerboard": "https://github.com/CityOfPhiladelphia/layerboard#6c433e48b3097a612071f938cbdd80cf6ec214d7",
     "@sentry/browser": "4.3.4",
     "axios": "^0.18.0",
     "moment": "^2.24.0",
     "phila-standards": "^1.0.2",
-    "vue": "^2.6.8"
+    "vue": "^2.6.9"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-service": "^3.4.0",
-    "vue-template-compiler": "^2.6.8",
+    "vue-template-compiler": "^2.6.9",
     "webpack-visualizer-plugin": "^0.1.11"
   },
   "postcss": {
