@@ -10,14 +10,28 @@ ________                           _____
 // import * as Sentry from '@sentry/browser';
 // Sentry.init({ dsn: 'https://ba45a0a61b464a2e9f55c5fd55e209d6@sentry.io/1332677' });
 
+import Vue from 'vue';
+Vue.config.devtools = true;
 
-// Font Awesome Icons
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faDotCircle} from '@fortawesome/free-regular-svg-icons/faDotCircle';
-library.add(faDotCircle);
+// import * as datefns from 'date-fns';
+// var test = datefns.format(1552067696, 'MM/DD/YYYY')
+// console.log('datefns:', datefns, 'datefns.format:', datefns.format, 'test:', test);
+
+import * as esri from 'esri-leaflet';
+L.esri = esri;
+import * as rend from 'esri-leaflet-renderers';
+L.esri.Renderers = rend;
+import 'esri-leaflet-legend/dist/esri-leaflet-legend-compat-src-edit.js';
+import 'Leaflet-PointInPolygon/wise-leaflet-pip.js';
+import '@mapbox/leaflet-omnivore/leaflet-omnivore.min.js';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faSquare } from '@fortawesome/free-solid-svg-icons/faSquare';
+library.add(faSquare);
 
 import axios from 'axios';
-import layerboard from '@philly/layerboard';
+// import layerboard from '@philly/layerboard';
+import layerboard from '@philly/layerboard/src/main.js';
 
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-easybutton/src/easy-button.css';
@@ -91,6 +105,6 @@ layerboard({
   gatekeeperKey: GATEKEEPER_KEY,
   baseConfig: BASE_CONFIG_URL,
   webmapId: WEBMAP_ID,
-  topics: [],
+  // topics: [],
   modals: ['help'],
 });
