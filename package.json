@@ -13,11 +13,8 @@
     "dev-build": "vue-cli-service build --mode development"
   },
   "dependencies": {
-    "@philly/layerboard": "^0.0.12",
+    "@philly/layerboard": "^0.0.13",
     "@sentry/browser": "4.3.4",
-    "axios": "^0.18.0",
-    "moment": "^2.24.0",
-    "phila-standards": "^1.0.2",
     "vue": "^2.6.9"
   },
   "devDependencies": {
