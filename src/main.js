@@ -23,7 +23,8 @@ import * as rend from 'esri-leaflet-renderers';
 L.esri.Renderers = rend;
 import 'esri-leaflet-legend/dist/esri-leaflet-legend-compat-src-edit.js';
 import 'Leaflet-PointInPolygon/wise-leaflet-pip.js';
-import '@mapbox/leaflet-omnivore/leaflet-omnivore.min.js';
+// import '@mapbox/leaflet-omnivore/leaflet-omnivore.min.js';
+// import 'leaflet-omnivore/index.js';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSquare } from '@fortawesome/free-solid-svg-icons/faSquare';
@@ -100,7 +101,7 @@ layerboard({
     popoutAble: true,
   },
   pictometry: {
-    enabled: false,
+    enabled: true,
   },
   gatekeeperKey: GATEKEEPER_KEY,
   baseConfig: BASE_CONFIG_URL,
