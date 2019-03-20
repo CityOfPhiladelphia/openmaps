@@ -101,7 +101,7 @@ layerboard({
     popoutAble: true,
   },
   pictometry: {
-    enabled: true,
+    enabled: false,
   },
   gatekeeperKey: GATEKEEPER_KEY,
   baseConfig: BASE_CONFIG_URL,
