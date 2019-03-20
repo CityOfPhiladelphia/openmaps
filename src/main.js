@@ -13,30 +13,11 @@ ________                           _____
 import Vue from 'vue';
 Vue.config.devtools = true;
 
-// import * as datefns from 'date-fns';
-// var test = datefns.format(1552067696, 'MM/DD/YYYY')
-// console.log('datefns:', datefns, 'datefns.format:', datefns.format, 'test:', test);
+// import { library } from '@fortawesome/fontawesome-svg-core';
+// import { faSquare } from '@fortawesome/pro-light-svg-icons/faSquare';
+// library.add(faSquare);
 
-import * as esri from 'esri-leaflet';
-L.esri = esri;
-import * as rend from 'esri-leaflet-renderers';
-L.esri.Renderers = rend;
-import 'esri-leaflet-legend/dist/esri-leaflet-legend-compat-src-edit.js';
-import 'Leaflet-PointInPolygon/wise-leaflet-pip.js';
-// import '@mapbox/leaflet-omnivore/leaflet-omnivore.min.js';
-// import 'leaflet-omnivore/index.js';
-
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faSquare } from '@fortawesome/free-solid-svg-icons/faSquare';
-library.add(faSquare);
-
-import axios from 'axios';
-// import layerboard from '@philly/layerboard';
 import layerboard from '@philly/layerboard/src/main.js';
-
-import 'leaflet/dist/leaflet.css';
-import 'leaflet-easybutton/src/easy-button.css';
-import 'leaflet-measure/dist/leaflet-measure.css';
 
 // turn off console logging in production
 // TODO come up with better way of doing this with webpack + env vars
@@ -46,7 +27,6 @@ if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
 }
 
 window.openHelp = function(){
-// function openHelp() {
   var firstHash = window.location.hash;
   console.log('setHash is running, firstHash:', firstHash);
   var firstHashArr = firstHash.split('/').slice(2);
@@ -66,6 +46,7 @@ var WEBMAP_ID = '1596df70df0349e293ceec46a06ccc50';
 
 layerboard({
   bundled: true,
+  layerFilter: true,
   router: {
     enabled: true
   },
