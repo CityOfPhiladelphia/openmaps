@@ -10,21 +10,13 @@ ________                           _____
 // import * as Sentry from '@sentry/browser';
 // Sentry.init({ dsn: 'https://ba45a0a61b464a2e9f55c5fd55e209d6@sentry.io/1332677' });
 
-import Vue from 'vue';
-Vue.config.devtools = true;
-
-// import { library } from '@fortawesome/fontawesome-svg-core';
-// import { faSquare } from '@fortawesome/pro-light-svg-icons/faSquare';
-// library.add(faSquare);
-
-import layerboard from '@philly/layerboard/src/main.js';
-
 // turn off console logging in production
-// TODO come up with better way of doing this with webpack + env vars
 const { hostname='' } = location;
 if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
   console.log = console.info = console.debug = console.error = function () {};
 }
+
+import layerboard from '@philly/layerboard/src/main.js';
 
 window.openHelp = function(){
   var firstHash = window.location.hash;
@@ -38,11 +30,9 @@ window.openHelp = function(){
   window.location.hash = finalHash;
 }
 
-var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/ajrothwell/openmaps-base-config@ba14a53156e85ca8e655fc85cc83dd24d7323ef2/config.js';
+var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/layerboard-default-base-config@8e227b2abe04a0dee3a327ccab9d7dc49e1b6354/config.js';
 var GATEKEEPER_KEY = 'ec8681f792812d7e3ff15e9094bfd4ad';
-// var WEBMAP_ID = '4c3ed877199c402895b7fa45ce6409b6';
 var WEBMAP_ID = '1596df70df0349e293ceec46a06ccc50';
-
 
 layerboard({
   bundled: true,
@@ -63,7 +53,6 @@ layerboard({
     placeholder: 'Search the map',
   },
   map: {
-    // possibly should move to base config
     defaultBasemap: 'pwd',
     defaultIdentifyFeature: 'address-marker',
     imagery: {
@@ -80,6 +69,10 @@ layerboard({
     enabled: true,
     measurementAllowed: false,
     popoutAble: true,
+    recordingsUrl: 'https://atlas.cyclomedia.com/Recordings/wfs',
+    username: process.env.VUE_APP_CYCLOMEDIA_USERNAME,
+    password: process.env.VUE_APP_CYCLOMEDIA_PASSWORD,
+    apiKey: process.env.VUE_APP_CYCLOMEDIA_API_KEY,
   },
   pictometry: {
     enabled: false,
