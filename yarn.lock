@@ -824,9 +824,10 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@philly/layerboard@https://github.com/CityOfPhiladelphia/layerboard#bfda2394300ab9381dc9061352667125c2fed301":
-  version "0.0.25"
-  resolved "https://github.com/CityOfPhiladelphia/layerboard#bfda2394300ab9381dc9061352667125c2fed301"
+"@philly/layerboard@^0.0.26":
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/@philly/layerboard/-/layerboard-0.0.26.tgz#fe240a72326578602816a39c476c447bb78fd89d"
+  integrity sha512-rMtGKMZtTuBJK35ISZVpJMi73K53pbBDYrH3RcngekP0h9KzfEXupKGWsFklPzzDkai2azMKURcmM2EMKjbJQg==
   dependencies:
     "@philly/vue-comps" "^1.0.33"
     "@philly/vue-datafetch" "^0.0.20"
