@@ -13,7 +13,7 @@
     "dev-build": "vue-cli-service build --mode development"
   },
   "dependencies": {
-    "@philly/layerboard": "^0.0.27",
+    "@philly/layerboard": "^0.0.28",
     "@sentry/browser": "4.3.4",
     "vue": "^2.6.9"
   },
