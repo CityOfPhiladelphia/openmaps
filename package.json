@@ -13,7 +13,7 @@
     "dev-build": "vue-cli-service build --mode development"
   },
   "dependencies": {
-    "@philly/layerboard": "^0.0.29",
+    "@philly/layerboard": "https://github.com/CityOfPhiladelphia/layerboard#28157127a5073282ac975192e5128b9001d145f9",
     "@sentry/browser": "4.3.4",
     "vue": "^2.6.9"
   },
