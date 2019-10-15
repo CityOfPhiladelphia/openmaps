@@ -40,14 +40,14 @@ layerboard(
             customStyle: { 'color': 'white', 'border-bottom': '0px' },
             components: [
               {
-                type: 'about'
-              }
-            ]
+                type: 'about',
+              },
+            ],
           },
           slots: {
             shouldShowValue: false,
-            value: 'Help'
-          }
+            value: 'Help',
+          },
         },
         {
           type: 'Anchor',
@@ -55,19 +55,19 @@ layerboard(
             text: 'Feedback',
             target: 'blank',
             customStyle: { 'color': 'white', 'border-bottom': '0px' },
-            href: '//philagsg.typeform.com/to/GQOPjW'
-          }
-        }
-      ]
+            href: '//philagsg.typeform.com/to/GQOPjW',
+          },
+        },
+      ],
     },
     bundled: true,
     layerFilter: true,
     router: {
-      enabled: true
+      enabled: true,
     },
     geolocation: {
       enabled: true,
-      icon: ['far', 'dot-circle']
+      icon: [ 'far', 'dot-circle' ],
     },
     addressInput: {
       width: 415,
@@ -81,13 +81,13 @@ layerboard(
       defaultBasemap: 'pwd',
       defaultIdentifyFeature: 'address-marker',
       imagery: {
-        enabled: true
+        enabled: true,
       },
       initialImagery: 'imagery2019',
       historicBasemaps: {
-        enabled: true
+        enabled: true,
       },
-      center: [-75.16347348690034, 39.952562122622254],
+      center: [ -75.16347348690034, 39.952562122622254 ],
       clickToIdentifyFeatures: true,
       containerClass: 'map-container-type2',
     },

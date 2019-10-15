@@ -1,10 +1,15 @@
 <template>
   <div class="background">
-    <h2 class="text-center "><b>How to use OpenMaps</b></h2>
+    <h2 class="text-center ">
+      <b>How to use OpenMaps</b>
+    </h2>
     <div class="grid-x align-center-middle">
-
       <div class="cell small-9 medium-3 text-center">
-        <font-awesome-icon icon="filter" class="fa-3x" aria-hidden="true" />
+        <font-awesome-icon
+          icon="filter"
+          class="fa-3x"
+          aria-hidden="true"
+        />
       </div>
       <div class="cell small-15 medium-21 text-div">
         <p><b>Filter the list of layers available in the left panel.</b></p>
@@ -12,7 +17,11 @@
       </div>
 
       <div class="cell small-9 medium-3 text-center">
-        <font-awesome-icon icon="check-square" class="fa-3x" aria-hidden="true" />
+        <font-awesome-icon
+          icon="check-square"
+          class="fa-3x"
+          aria-hidden="true"
+        />
       </div>
       <div class="cell small-15 medium-21 text-div">
         <p><b>Toggle on and off map layers by clicking on the checkboxes in the layer panel.</b></p>
@@ -20,7 +29,11 @@
       </div>
 
       <div class="cell small-9 medium-3 text-center">
-        <font-awesome-icon :icon="['far', 'square']" class="fa-3x" aria-hidden="true" />
+        <font-awesome-icon
+          :icon="['far', 'square']"
+          class="fa-3x"
+          aria-hidden="true"
+        />
       </div>
       <div class="cell small-15 medium-21 text-div">
         <p><b>If a checkbox is grayed out, zoom in further on the map and it will become active.</b></p>
@@ -28,7 +41,11 @@
       </div>
 
       <div class="cell small-9 medium-3 text-center">
-        <font-awesome-icon icon="map-marker-alt" class="fa-3x" aria-hidden="true" />
+        <font-awesome-icon
+          icon="map-marker-alt"
+          class="fa-3x"
+          aria-hidden="true"
+        />
       </div>
       <div class="cell small-15 medium-21 text-div">
         <p><b>Click on any feature that appears on the map to get a popup with that feature's info.</b></p>
@@ -36,7 +53,11 @@
       </div>
 
       <div class="cell small-9 medium-3 text-center">
-          <font-awesome-icon icon="search" class="fa-3x" aria-hidden="true" />
+        <font-awesome-icon
+          icon="search"
+          class="fa-3x"
+          aria-hidden="true"
+        />
       </div>
       <div class="cell small-15 medium-21 text-div">
         <p><b>Search for an address or intersection.</b></p>
@@ -44,7 +65,10 @@
       </div>
 
       <div class="cell small-9 medium-3 text-center">
-        <img class="street-view-image" :src="'images/cyclomedia_blue.png'">
+        <img
+          class="street-view-image"
+          :src="'images/cyclomedia_blue.png'"
+        >
       </div>
       <div class="cell small-15 medium-21 text-div">
         <p><b>Toggle on and off street view</b></p>
@@ -52,13 +76,16 @@
       </div>
 
       <div class="cell small-9 medium-3 text-center">
-          <font-awesome-icon icon="info-circle" class="fa-3x" aria-hidden="true" />
+        <font-awesome-icon
+          icon="info-circle"
+          class="fa-3x"
+          aria-hidden="true"
+        />
       </div>
       <div class="cell small-15 medium-21 text-div">
         <p><b>Learn more about and download data.</b></p>
         <p>Click this icon to be linked to the metadata page for any dataset.</p>
       </div>
-
     </div>
   </div>
 </template>
@@ -67,7 +94,7 @@
 
 export default {
   name: 'ModalAbout',
-}
+};
 </script>
 
 <style scoped>
