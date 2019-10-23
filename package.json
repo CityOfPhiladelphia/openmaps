@@ -15,14 +15,14 @@
     "lintFix": "vue-cli-service lint --fix"
   },
   "dependencies": {
-    "@philly/layerboard": "^0.0.35",
+    "@philly/layerboard": "^0.0.37",
     "@sentry/browser": "4.3.4",
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.4.0",
-    "@vue/cli-plugin-eslint": "^3.12.0",
-    "@vue/cli-service": "^3.4.0",
+    "@vue/cli-plugin-babel": "^4.0.5",
+    "@vue/cli-plugin-eslint": "^4.0.5",
+    "@vue/cli-service": "^4.0.5",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.5.1",
     "eslint-plugin-vue": "^5.2.3",
