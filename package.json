@@ -15,7 +15,7 @@
     "lintFix": "vue-cli-service lint --fix"
   },
   "dependencies": {
-    "@philly/layerboard": "https://github.com/CityOfPhiladelphia/layerboard#0ec00470e6f050e4a8e519b7592fb02464d05c1f",
+    "@philly/layerboard": "https://github.com/CityOfPhiladelphia/layerboard#e08551a1bba5cb05161e7d9f125df014405f129b",
     "@sentry/browser": "5.7.1",
     "vue": "^2.6.10"
   },

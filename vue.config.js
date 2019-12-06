@@ -22,6 +22,7 @@ module.exports = {
     '@philly/vue-comps',
     '@philly/vue-mapping',
     '@philly/vue-datafetch',
+    'arcgis-to-geojson-utils',
     // /other-dep/
   ],
 };
