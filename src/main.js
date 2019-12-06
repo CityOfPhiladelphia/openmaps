@@ -107,5 +107,5 @@ layerboard(
     gatekeeperKey: GATEKEEPER_KEY,
     baseConfig: BASE_CONFIG_URL,
     webmapId: WEBMAP_ID,
-  }
+  },
 );
