@@ -93,6 +93,7 @@ layerboard(
     },
     cyclomedia: {
       enabled: true,
+      orientation: 'horizontal',
       measurementAllowed: false,
       popoutAble: true,
       recordingsUrl: 'https://atlas.cyclomedia.com/Recordings/wfs',
@@ -106,5 +107,5 @@ layerboard(
     gatekeeperKey: GATEKEEPER_KEY,
     baseConfig: BASE_CONFIG_URL,
     webmapId: WEBMAP_ID,
-  }
+  },
 );
