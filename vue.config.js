@@ -18,10 +18,10 @@ module.exports = {
   },
   transpileDependencies: [
     // can be string or regex
-    '@philly/layerboard',
-    '@philly/vue-comps',
-    '@philly/vue-mapping',
-    '@philly/vue-datafetch',
+    '@phila/layerboard',
+    '@phila/vue-comps',
+    '@phila/vue-mapping',
+    '@phila/vue-datafetch',
     'arcgis-to-geojson-utils',
     // /other-dep/
   ],
