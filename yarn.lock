@@ -885,21 +885,21 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@philly/layerboard@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@philly/layerboard/-/layerboard-1.0.0.tgz#95e5776617d2663bfb874aa81c2c89ea23cf3fba"
-  integrity sha512-A0d/2N2donlMXIB6/+4SlmieBfDCA/BiHuzdXIP+OM4AV6HttfXtxb/AiVLslhwRDpIHk4LzTd7h7xvhcYVqnw==
+"@phila/layerboard@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@phila/layerboard/-/layerboard-1.0.1.tgz#fe309f7dfa5c7aa455f0e700f7815a817dcf9aa0"
+  integrity sha512-fO0IuKAuvpGQtLEOr/nWXdHH9CKo2/N14lxdMxOI1SUfbjvBTxFU055zoErlzpDa/3iLS26aOeIxHFbdSV5rLQ==
   dependencies:
-    "@philly/vue-comps" "^2.0.0"
-    "@philly/vue-datafetch" "^1.0.0"
-    "@philly/vue-mapping" "^2.0.0"
+    "@phila/vue-comps" "^2.0.9"
+    "@phila/vue-datafetch" "^1.1.7"
+    "@phila/vue-mapping" "^2.0.5"
     vue "^2.6.10"
     vuex "^3.1.2"
 
-"@philly/vue-comps@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@philly/vue-comps/-/vue-comps-2.0.0.tgz#8184b59fc853f700f23975bf94249c1b20d6beb1"
-  integrity sha512-8UzNAN+qVyWHRKGHmiONbLZHGFMZqMr3A9H7bdjy9Hgm9vbT5qztq7zzxhbdC8MBaLvqH4j/7mtgyainbzlZtw==
+"@phila/vue-comps@^2.0.9":
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/@phila/vue-comps/-/vue-comps-2.0.9.tgz#aa66fecb4830bcbd75985b99788d593f4c2f3c4c"
+  integrity sha512-vhXyzPG5dYmB/T9ZHNCBozpOurW8j3ahlX+p1XgKSqvR6aRvKpjUwekrpFFsIqHrOaV4k4tGIGPVaBEWg7Xh6Q==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.15"
     "@fortawesome/free-regular-svg-icons" "^5.7.2"
@@ -915,10 +915,10 @@
     vue "^2.6.10"
     vuex "^3.1.2"
 
-"@philly/vue-datafetch@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@philly/vue-datafetch/-/vue-datafetch-1.0.0.tgz#f57d18c0307468434ea92c75aa0f3672540b9be1"
-  integrity sha512-QPprwXj3RDDVMaWHwCaGOFFCiX9bkpxS+Vo7gO2s+aq2mGDYG5s7M486jSSDCETCezcTVRAuDizqgl0U0nNtug==
+"@phila/vue-datafetch@^1.1.7":
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/@phila/vue-datafetch/-/vue-datafetch-1.1.7.tgz#87326143412a54f9f17b8cb86c6bf62c249233e3"
+  integrity sha512-pDh+rCtRQQ86l9Wp9LD1nbpvb9NY2fTau7dlaUxh/EJ98v4KDbIGBMZ0UaaefzWMtwsK1/vPrwjMPSxaMEuHEA==
   dependencies:
     "@turf/turf" "^5.1.6"
     axios "^0.19.0"
@@ -930,10 +930,10 @@
     vue "^2.6.10"
     vuex "^3.1.2"
 
-"@philly/vue-mapping@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@philly/vue-mapping/-/vue-mapping-2.0.0.tgz#5d44e79ef93384ba112352aec5adf9644ed3e745"
-  integrity sha512-iyxLzNsxXouy7L4V2pgfovQUmVTwAQVMF0a9Av/LWnokJ8Ny55Grvd8vIOsh5XRN481qoJQ3tOS980XoWVj0Qg==
+"@phila/vue-mapping@^2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@phila/vue-mapping/-/vue-mapping-2.0.5.tgz#c97f064bc6d5f95e555ca6ef60ec7c0c89b2cffd"
+  integrity sha512-tQjPAmsGmFbtsRw7GOiGWDL10BsiVXHDid+PvMVmNJUNZaA0fq6tb8lP0LJN8M90lxDYNRhDUDkPUNBIj2al8Q==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.15"
     "@fortawesome/free-regular-svg-icons" "^5.7.2"
@@ -957,7 +957,7 @@
     lodash-es "^4.17.14"
     phila-standards "^1.0.2"
     proj4 "^2.6.0"
-    sdleafletdraw "https://github.com/CityOfPhiladelphia/SDLeafletDraw#a0e54633bc22c342ab89668e4ca4288c8d2dc68f"
+    sdleafletdraw "https://github.com/CityOfPhiladelphia/SDLeafletDraw#a3e8e8a860e75d370e533247bd31dfd55e865a62"
     vue "^2.6.10"
     vuex "^3.1.2"
 
@@ -6824,7 +6824,7 @@ leaflet-virtual-grid@^1.0.7:
   dependencies:
     leaflet "^1.0.0"
 
-leaflet@1.5.1, leaflet@^1.0.0, leaflet@^1.0.0-rc.3, leaflet@^1.0.1, leaflet@^1.3.1, leaflet@^1.4.0, leaflet@^1.5.1:
+leaflet@1.5.1, leaflet@^1.0.0, leaflet@^1.0.0-rc.3, leaflet@^1.0.1, leaflet@^1.3.1, leaflet@^1.4.0:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.5.1.tgz#9afb9d963d66c870066b1342e7a06f92840f46bf"
   integrity sha512-ekM9KAeG99tYisNBg0IzEywAlp0hYI5XRipsqRXyRTeuU8jcuntilpp+eFf5gaE0xubc9RuSNIVtByEKwqFV0w==
@@ -9236,11 +9236,11 @@ scope-analyzer@^2.0.1:
     estree-is-function "^1.0.0"
     get-assigned-identifiers "^1.1.0"
 
-"sdleafletdraw@https://github.com/CityOfPhiladelphia/SDLeafletDraw#a0e54633bc22c342ab89668e4ca4288c8d2dc68f":
+"sdleafletdraw@https://github.com/CityOfPhiladelphia/SDLeafletDraw#a3e8e8a860e75d370e533247bd31dfd55e865a62":
   version "1.3.0"
-  resolved "https://github.com/CityOfPhiladelphia/SDLeafletDraw#a0e54633bc22c342ab89668e4ca4288c8d2dc68f"
+  resolved "https://github.com/CityOfPhiladelphia/SDLeafletDraw#a3e8e8a860e75d370e533247bd31dfd55e865a62"
   dependencies:
-    leaflet "^1.5.1"
+    leaflet "1.5.1"
 
 select-hose@^2.0.0:
   version "2.0.0"

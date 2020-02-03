@@ -16,7 +16,7 @@ if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
   console.log = console.info = console.debug = console.error = function () {};
 }
 
-import layerboard from '@philly/layerboard/src/main.js';
+import layerboard from '@phila/layerboard/src/main.js';
 
 import modalAbout from './components/ModalAbout.vue';
 
@@ -89,7 +89,7 @@ layerboard(
       },
       center: [ -75.16347348690034, 39.952562122622254 ],
       clickToIdentifyFeatures: true,
-      containerClass: 'map-container-type2',
+      containerClass: 'map-container',
     },
     cyclomedia: {
       enabled: true,
