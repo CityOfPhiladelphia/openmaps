@@ -24,7 +24,6 @@ const customComps = {
   'about': modalAbout,
 };
 
-
 var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/layerboard-default-base-config@6ecbb73ae275facb3448d35f9860831b641220b5/config.js';
 var GATEKEEPER_KEY = process.env.VUE_APP_GATEKEEPER_KEY;
 var WEBMAP_ID = '1596df70df0349e293ceec46a06ccc50';
