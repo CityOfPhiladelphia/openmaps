@@ -15,7 +15,7 @@
     "lintFix": "vue-cli-service lint --fix"
   },
   "dependencies": {
-    "@phila/layerboard": "1.1.14",
+    "@phila/layerboard": "2.0.0",
     "@sentry/browser": "5.7.1",
     "vue": "^2.6.10"
   },
@@ -38,5 +38,8 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "engines": {
+    "yarn": "YARN NO LONGER USED - use npm instead."
+  }
 }
