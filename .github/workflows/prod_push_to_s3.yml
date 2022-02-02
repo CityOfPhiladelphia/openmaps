@@ -36,7 +36,7 @@ jobs:
       env:
         AWS_DEFAULT_REGION: 'us-east-1'
         AWS_S3_BUCKET: openmaps.phila.gov
-        AWS_CLOUDFRONT_DISTRIBUTION: E16W7AD8ARF9IM
+        AWS_CLOUDFRONT_DISTRIBUTION: E1B7A3V9XQU99A
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
