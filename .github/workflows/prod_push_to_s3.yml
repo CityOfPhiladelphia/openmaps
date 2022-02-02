@@ -32,7 +32,7 @@ jobs:
         VUE_APP_CYCLOMEDIA_PASSWORD: ${{ secrets.VUE_APP_CYCLOMEDIA_PASSWORD }}
         VUE_APP_CYCLOMEDIA_USERNAME: ${{ secrets.VUE_APP_CYCLOMEDIA_USERNAME }}
 
-    - name: Deploy to Prod s3
+    - name: Deploy to Prod s3, Set index headers, and Invalidate Cloudfront
       env:
         AWS_DEFAULT_REGION: 'us-east-1'
         AWS_S3_BUCKET: openmaps.phila.gov
