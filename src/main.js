@@ -94,7 +94,7 @@ layerboard(
     },
     cyclomedia: {
       enabled: true,
-      orientation: 'horizontal',
+      // orientation: 'horizontal',
       measurementAllowed: false,
       popoutAble: true,
       recordingsUrl: 'https://atlas.cyclomedia.com/Recordings/wfs',
