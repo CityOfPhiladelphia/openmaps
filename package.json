@@ -15,7 +15,7 @@
     "lintFix": "vue-cli-service lint --fix"
   },
   "dependencies": {
-    "@phila/layerboard": "2.0.3",
+    "@phila/layerboard": "2.0.4",
     "@sentry/browser": "5.7.1",
     "vue": "^2.7.10"
   },
