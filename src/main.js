@@ -24,7 +24,7 @@ const customComps = {
   'about': modalAbout,
 };
 
-var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/layerboard-default-base-config@b4bf12dea4eb57cfa16fde28ba2987617c866de8/config.js';
+var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/layerboard-default-base-config@ac4809b055510ae8540edfffe81e3b69047148b6/config.js';
 var GATEKEEPER_KEY = process.env.VUE_APP_GATEKEEPER_KEY;
 var WEBMAP_ID = '1596df70df0349e293ceec46a06ccc50';
 
@@ -84,7 +84,7 @@ layerboard(
       imagery: {
         enabled: true,
       },
-      initialImagery: 'imagery2023',
+      initialImagery: 'imagery2024',
       historicBasemaps: {
         enabled: true,
       },
