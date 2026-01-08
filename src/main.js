@@ -26,7 +26,7 @@ const customComps = {
 
 var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/layerboard-default-base-config@ac4809b055510ae8540edfffe81e3b69047148b6/config.js';
 var GATEKEEPER_KEY = process.env.VUE_APP_GATEKEEPER_KEY;
-var WEBMAP_ID = '1596df70df0349e293ceec46a06ccc50';
+var WEBMAP_ID = '376af635c84643cd816a8c5d017a53aa';
 
 layerboard(
   {
