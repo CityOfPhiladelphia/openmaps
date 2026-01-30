@@ -1,12 +1,12 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+# Build and deploy OpenMaps Vue 3 to S3 for development preview
+# Deploys to openmaps-dev.phila.gov
 
 name: dev Push to S3
 
 on:
   push:
     branches:
-      - main
+      - vue3
 
 jobs:
   build:
@@ -14,32 +14,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
-    - name: Use Node.js 16.x
-      uses: actions/setup-node@v3
+    - name: Install pnpm
+      uses: pnpm/action-setup@v4
       with:
-        node-version: '16.x'
-        cache: 'npm'
+        version: 10
 
-    - name: install npm 6
-      run: |
-        npm install -g npm@6
+    - name: Use Node.js 22.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22.x'
+        cache: 'pnpm'
 
-    - name: npm install, and build
-      run: |
-        printf "@fortawesome:registry=https://npm.fontawesome.com/\n//npm.fontawesome.com/:_authToken=${FONTAWESOME_NPM_AUTH_TOKEN}" >> ~/.npmrc
-        git config --global url."https://".insteadOf ssh://
-        npm ci
-        npm run build
+    - name: pnpm install
+      run: pnpm install
+
+    - name: Build
+      run: pnpm build
       env:
-        FONTAWESOME_NPM_AUTH_TOKEN: ${{ secrets.FA_AUTH_TOKEN }}
-        VUE_APP_GATEKEEPER_KEY: ${{ secrets.VUE_APP_GATEKEEPER_KEY }}
-        VUE_APP_CYCLOMEDIA_API_KEY: ${{ secrets.VUE_APP_CYCLOMEDIA_API_KEY }}
-        VUE_APP_CYCLOMEDIA_PASSWORD: ${{ secrets.VUE_APP_CYCLOMEDIA_PASSWORD }}
-        VUE_APP_CYCLOMEDIA_USERNAME: ${{ secrets.VUE_APP_CYCLOMEDIA_USERNAME }}
+        VITE_GATEKEEPER_KEY: ${{ secrets.VITE_GATEKEEPER_KEY }}
+        VITE_CYCLOMEDIA_API_KEY: ${{ secrets.VITE_CYCLOMEDIA_API_KEY }}
+        VITE_CYCLOMEDIA_PASSWORD: ${{ secrets.VITE_CYCLOMEDIA_PASSWORD }}
+        VITE_CYCLOMEDIA_USERNAME: ${{ secrets.VITE_CYCLOMEDIA_USERNAME }}
 
-    - name: Deploy to Dev s3, Set index headers, and Invalidate Cloudfront
+    - name: Deploy to openmaps-dev.phila.gov
       env:
         AWS_DEFAULT_REGION: 'us-east-1'
         AWS_S3_BUCKET: openmaps-dev.phila.gov

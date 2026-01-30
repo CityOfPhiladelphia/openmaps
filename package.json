@@ -1,45 +1,33 @@
 {
   "name": "openmaps",
-  "version": "0.0.1",
-  "description": "A map-based data viewer for the City of Philadelphia",
-  "main": "",
-  "repository": "https://github.com/cityofphiladelphia/openmaps",
-  "author": "City of Philadelphia <maps@phila.gov>",
-  "license": "MIT",
-  "private": false,
+  "private": true,
+  "version": "3.0.0",
+  "type": "module",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "dev-build": "vue-cli-service build --mode development",
-    "lint": "vue-cli-service lint",
-    "lintFix": "vue-cli-service lint --fix"
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@phila/layerboard": "2.2.0",
-    "@sentry/browser": "5.7.1",
-    "vue": "^2.7.10"
+    "@fortawesome/fontawesome-svg-core": "^6.5.0",
+    "@fortawesome/free-regular-svg-icons": "^6.5.0",
+    "@fortawesome/free-solid-svg-icons": "^6.5.0",
+    "@fortawesome/vue-fontawesome": "^3.0.0",
+    "@phila/layerboard": "3.0.0-beta.0",
+    "@phila/phila-ui-core": "2.2.1-beta.0",
+    "@phila/phila-ui-link": "1.0.0",
+    "@phila/phila-ui-map-core": "0.0.2-beta.8",
+    "maplibre-gl": "^5.0.0",
+    "pinia": "^3.0.0",
+    "vue": "^3.5.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.19",
-    "@vue/cli-plugin-eslint": "^4.5.19",
-    "@vue/cli-service": "^4.5.19",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.0.1",
-    "vue-template-compiler": "^2.7.10",
-    "webpack-visualizer-plugin": "^0.1.11"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
-  "engines": {
-    "yarn": "YARN NO LONGER USED - use npm instead."
+    "@tsconfig/node20": "^20.1.0",
+    "@types/node": "^20.0.0",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "@vue/tsconfig": "^0.5.0",
+    "typescript": "~5.6.0",
+    "vite": "^6.0.0",
+    "vue-tsc": "^2.0.0"
   }
 }
