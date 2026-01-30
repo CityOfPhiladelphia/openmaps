@@ -13,7 +13,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.0",
     "@fortawesome/free-solid-svg-icons": "^6.5.0",
     "@fortawesome/vue-fontawesome": "^3.0.0",
-    "@phila/layerboard": "3.0.0-beta.0",
+    "@phila/layerboard": "3.0.0-beta.1",
     "@phila/phila-ui-core": "2.2.1-beta.0",
     "@phila/phila-ui-link": "1.0.0",
     "@phila/phila-ui-map-core": "0.0.2-beta.8",
