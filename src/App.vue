@@ -8,9 +8,9 @@
  */
 
 import { Layerboard } from '@phila/layerboard'
+import type { CyclomediaConfig, PictometryCredentials } from '@phila/layerboard'
 import HelpModal from './components/HelpModal.vue'
 import { PhilaLink } from "@phila/phila-ui-link"
-import type { CyclomediaConfig, PictometryCredentials } from "@phila/phila-ui-map-core"
 
 // WebMap ID for OpenMaps
 const WEBMAP_ID = '376af635c84643cd816a8c5d017a53aa'
