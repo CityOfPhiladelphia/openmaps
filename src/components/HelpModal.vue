@@ -1,13 +1,7 @@
 <script setup lang="ts">
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import {
-  faFilter,
-  faCheckSquare,
-  faMapMarkerAlt,
-  faSearch,
-  faInfoCircle,
-} from '@fortawesome/free-solid-svg-icons'
-import { faSquare } from '@fortawesome/free-regular-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faFilter, faCheckSquare, faMapMarkerAlt, faSearch, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import { faSquare } from "@fortawesome/free-regular-svg-icons";
 </script>
 
 <template>
@@ -20,7 +14,10 @@ import { faSquare } from '@fortawesome/free-regular-svg-icons'
       </div>
       <div class="help-text">
         <p><b>Filter the list of layers available in the left panel.</b></p>
-        <p>Type in the box for the first filter to filter by text. Select a category from the second filter to filter by category.</p>
+        <p>
+          Type in the box for the first filter to filter by text. Select a category from the second filter to filter by
+          category.
+        </p>
       </div>
 
       <div class="help-icon">
@@ -56,15 +53,14 @@ import { faSquare } from '@fortawesome/free-regular-svg-icons'
       </div>
 
       <div class="help-icon">
-        <img
-          class="street-view-image"
-          src="../assets/cyclomedia_blue.png"
-          alt="Street view"
-        >
+        <img class="street-view-image" src="../assets/cyclomedia_blue.png" alt="Street view" />
       </div>
       <div class="help-text">
         <p><b>Toggle on and off street view.</b></p>
-        <p>Half of the map panel will be taken up by the street view. If you are zoomed in far enough, circles will appear along the streets in the map. Click on a circle to change the street view location to that point.</p>
+        <p>
+          Half of the map panel will be taken up by the street view. If you are zoomed in far enough, circles will
+          appear along the streets in the map. Click on a circle to change the street view location to that point.
+        </p>
       </div>
 
       <div class="help-icon">

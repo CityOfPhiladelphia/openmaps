@@ -7,13 +7,13 @@
  * - Fetches metadata for layer info links
  */
 
-import { Layerboard } from '@phila/layerboard'
-import type { CyclomediaConfig, PictometryCredentials } from '@phila/layerboard'
-import HelpModal from './components/HelpModal.vue'
-import { PhilaLink } from "@phila/phila-ui-link"
+import { Layerboard } from "@phila/layerboard";
+import type { CyclomediaConfig, PictometryCredentials } from "@phila/layerboard";
+import HelpModal from "./components/HelpModal.vue";
+import { PhilaLink } from "@phila/phila-ui-link";
 
 // WebMap ID for OpenMaps
-const WEBMAP_ID = '376af635c84643cd816a8c5d017a53aa'
+const WEBMAP_ID = "376af635c84643cd816a8c5d017a53aa";
 
 // Cyclomedia street-level imagery configuration
 const cyclomediaConfig: CyclomediaConfig = {
@@ -22,13 +22,13 @@ const cyclomediaConfig: CyclomediaConfig = {
   apiKey: import.meta.env.VITE_CYCLOMEDIA_API_KEY || "",
   srs: "EPSG:4326",
   locale: "en-US",
-}
+};
 
 // Pictometry oblique imagery credentials
 const pictometryCredentials: PictometryCredentials = {
   clientId: import.meta.env.VITE_PICTOMETRY_CLIENT_ID || "",
   clientSecret: import.meta.env.VITE_PICTOMETRY_CLIENT_SECRET || "",
-}
+};
 </script>
 
 <template>
