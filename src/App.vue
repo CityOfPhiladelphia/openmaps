@@ -41,6 +41,7 @@ const pictometryCredentials: PictometryCredentials = {
     :initial-zoom="15"
     :cyclomedia-config="cyclomediaConfig"
     :pictometry-credentials="pictometryCredentials"
+    :popup-overrides="{ 'crime-incidents-last-30-days': { showTime: true } }"
   >
     <template #footer="{ openModal }">
       <a href="#" class="footer-link" @click.prevent="openModal">Help</a>
