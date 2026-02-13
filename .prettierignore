@@ -1,6 +1,14 @@
 .beads/
+.github/
 dist/
-index.html
+docs/
 node_modules/
+*.config.js
+*.config.ts
+*.lock
+AGENTS.md
+index.html
+package.json
 pnpm-lock.yaml
 pnpm-workspace.yaml
+tsconfig.json
