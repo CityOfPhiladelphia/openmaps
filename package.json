@@ -18,7 +18,7 @@
     "@fortawesome/free-regular-svg-icons": "^7.1.0",
     "@fortawesome/free-solid-svg-icons": "^7.1.0",
     "@fortawesome/vue-fontawesome": "^3.0.0",
-    "@phila/layerboard": "3.0.0-beta.19",
+    "@phila/layerboard": "3.0.0-beta.20",
     "@phila/phila-ui-link": "1.0.2-beta.0",
     "maplibre-gl": "^5.0.0",
     "pinia": "^3.0.0",
