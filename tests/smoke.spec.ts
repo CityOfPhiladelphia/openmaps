@@ -56,10 +56,13 @@ test.describe("OpenMaps smoke tests", () => {
       timeout: 15_000,
     });
 
-    // Toggle on the first layer
-    const firstCheckbox = page.locator("label.layer-checkbox input[type='checkbox']").first();
-    await firstCheckbox.check();
-    await expect(firstCheckbox).toBeChecked();
+    // Toggle on Census Tracts - covers the entire city so a click always hits a feature
+    const censusCheckbox = page
+      .locator("label.layer-checkbox")
+      .filter({ hasText: "Census Tracts - 2020" })
+      .locator("input[type='checkbox']");
+    await censusCheckbox.check();
+    await expect(censusCheckbox).toBeChecked();
 
     // Wait for layer data to load
     await page.waitForTimeout(3_000);
@@ -71,14 +74,9 @@ test.describe("OpenMaps smoke tests", () => {
       await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
     }
 
-    // Check for popup — this test is allowed to be skipped if flaky
-    // A popup may or may not appear depending on whether features exist at click point
-    const popup = page.locator(".popup-content");
-    try {
-      await expect(popup).toBeVisible({ timeout: 5_000 });
-    } catch {
-      test.skip(true, "No feature at click point — popup test inconclusive");
-    }
+    await expect(page.locator(".popup-content")).toBeVisible({
+      timeout: 5_000,
+    });
   });
 
   test("mobile viewport shows hamburger menu", async ({ page }) => {
