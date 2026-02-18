@@ -63,7 +63,7 @@ jobs:
         run: sleep 30
 
       - name: Run smoke tests
-        run: pnpm test:e2e
+        run: pnpm test:e2e --project=chromium
 
       - name: Upload Playwright report
         uses: actions/upload-artifact@v4

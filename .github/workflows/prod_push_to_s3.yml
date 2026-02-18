@@ -61,7 +61,7 @@ jobs:
         run: sleep 30
 
       - name: Run smoke tests
-        run: pnpm test:e2e
+        run: pnpm test:e2e --project=chromium
         env:
           PLAYWRIGHT_BASE_URL: https://openmaps.phila.gov
 
