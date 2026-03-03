@@ -82,7 +82,7 @@ test.describe("OpenMaps smoke tests", () => {
   test("mobile viewport shows hamburger menu", async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
     await page.goto(BASE_URL);
-    await expect(page.locator(".maplibregl-canvas")).toBeVisible({
+    await expect(page.locator(".layerboard-sidebar")).toBeVisible({
       timeout: 15_000,
     });
 
