@@ -6,7 +6,7 @@ name: prod Push to S3
 on:
   push:
     branches:
-      - production-vue3
+      - production
 
 jobs:
   build:
