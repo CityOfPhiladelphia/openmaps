@@ -41,6 +41,8 @@ jobs:
           VITE_CYCLOMEDIA_API_KEY: ${{ secrets.VITE_CYCLOMEDIA_API_KEY }}
           VITE_CYCLOMEDIA_PASSWORD: ${{ secrets.VITE_CYCLOMEDIA_PASSWORD }}
           VITE_CYCLOMEDIA_USERNAME: ${{ secrets.VITE_CYCLOMEDIA_USERNAME }}
+          VITE_PICTOMETRY_CLIENT_ID: ${{ secrets.VITE_PICTOMETRY_CLIENT_ID }}
+          VITE_PICTOMETRY_CLIENT_SECRET: ${{ secrets.VITE_PICTOMETRY_CLIENT_SECRET }}
 
       - name: Deploy to openmaps.phila.gov
         env:
