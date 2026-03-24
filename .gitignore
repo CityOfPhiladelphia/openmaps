@@ -1,8 +1,32 @@
+# Dependencies
 node_modules
-public/*.js
-public/*.js.map
-.npmrc
+
+# Build output
+dist/
+
+# Local env files
 .env
 .env.local
-statistics.html
-dist/
+.env.*.local
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local dev overrides (uncomment pnpm-workspace.yaml when using local symlinks)
+# pnpm-workspace.yaml
+
+# OS
+.DS_Store
+
+# Playwright
+playwright-report/
+test-results/
+
+# Claude Code
+.claude/
