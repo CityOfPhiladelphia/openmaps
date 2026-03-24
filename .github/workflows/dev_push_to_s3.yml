@@ -1,5 +1,5 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+# Build and deploy OpenMaps Vue 3 to S3 for development preview
+# Deploys to openmaps-dev.phila.gov
 
 name: dev Push to S3
 
@@ -10,43 +10,65 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-    - name: Use Node.js 16.x
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16.x'
-        cache: 'npm'
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
 
-    - name: install npm 6
-      run: |
-        npm install -g npm@6
+      - name: Use Node.js 22.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.x"
+          cache: "pnpm"
 
-    - name: npm install, and build
-      run: |
-        printf "@fortawesome:registry=https://npm.fontawesome.com/\n//npm.fontawesome.com/:_authToken=${FONTAWESOME_NPM_AUTH_TOKEN}" >> ~/.npmrc
-        git config --global url."https://".insteadOf ssh://
-        npm ci
-        npm run build
-      env:
-        FONTAWESOME_NPM_AUTH_TOKEN: ${{ secrets.FA_AUTH_TOKEN }}
-        VUE_APP_GATEKEEPER_KEY: ${{ secrets.VUE_APP_GATEKEEPER_KEY }}
-        VUE_APP_CYCLOMEDIA_API_KEY: ${{ secrets.VUE_APP_CYCLOMEDIA_API_KEY }}
-        VUE_APP_CYCLOMEDIA_PASSWORD: ${{ secrets.VUE_APP_CYCLOMEDIA_PASSWORD }}
-        VUE_APP_CYCLOMEDIA_USERNAME: ${{ secrets.VUE_APP_CYCLOMEDIA_USERNAME }}
+      - name: Configure FontAwesome registry
+        run: |
+          echo "@fortawesome:registry=https://npm.fontawesome.com/" >> .npmrc
+          echo "//npm.fontawesome.com/:_authToken=${{ secrets.FA_AUTH_TOKEN }}" >> .npmrc
 
-    - name: Deploy to Dev s3, Set index headers, and Invalidate Cloudfront
-      env:
-        AWS_DEFAULT_REGION: 'us-east-1'
-        AWS_S3_BUCKET: openmaps-dev.phila.gov
-        AWS_CLOUDFRONT_DISTRIBUTION: E3T7BKDV4NKW92
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      run: |
-        aws s3 sync dist s3://$AWS_S3_BUCKET --region us-east-1 --delete
-        aws s3 cp s3://$AWS_S3_BUCKET s3://$AWS_S3_BUCKET --recursive --exclude "*" --include "*.html" --metadata-directive REPLACE --acl public-read --cache-control max-age=0,no-cache,no-store,must-revalidate,proxy-revalidate,public --expires "0" --content-type "text/html; charset=utf-8"
-        aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_DISTRIBUTION --paths "/*"
+      - name: pnpm install
+        run: pnpm install
+
+      - name: Build
+        run: pnpm build
+        env:
+          VITE_GATEKEEPER_KEY: ${{ secrets.VITE_GATEKEEPER_KEY }}
+          VITE_CYCLOMEDIA_API_KEY: ${{ secrets.VITE_CYCLOMEDIA_API_KEY }}
+          VITE_CYCLOMEDIA_PASSWORD: ${{ secrets.VITE_CYCLOMEDIA_PASSWORD }}
+          VITE_CYCLOMEDIA_USERNAME: ${{ secrets.VITE_CYCLOMEDIA_USERNAME }}
+          VITE_PICTOMETRY_CLIENT_ID: ${{ secrets.VITE_PICTOMETRY_CLIENT_ID }}
+          VITE_PICTOMETRY_CLIENT_SECRET: ${{ secrets.VITE_PICTOMETRY_CLIENT_SECRET }}
+
+      - name: Deploy to openmaps-dev.phila.gov
+        env:
+          AWS_DEFAULT_REGION: "us-east-1"
+          AWS_S3_BUCKET: openmaps-dev.phila.gov
+          AWS_CLOUDFRONT_DISTRIBUTION: E3T7BKDV4NKW92
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          aws s3 sync dist s3://$AWS_S3_BUCKET --region us-east-1 --delete
+          aws s3 cp s3://$AWS_S3_BUCKET s3://$AWS_S3_BUCKET --recursive --exclude "*" --include "*.html" --metadata-directive REPLACE --acl public-read --cache-control max-age=0,no-cache,no-store,must-revalidate,proxy-revalidate,public --expires "0" --content-type "text/html; charset=utf-8"
+          aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_DISTRIBUTION --paths "/*"
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Wait for CloudFront propagation
+        run: sleep 30
+
+      - name: Run smoke tests
+        run: pnpm test:e2e --project=chromium
+
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report-dev
+          path: playwright-report/
+          retention-days: 7
