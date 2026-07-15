@@ -26,9 +26,6 @@ importers:
       '@phila/layerboard':
         specifier: link:../vue3-layerboard
         version: link:../vue3-layerboard
-      '@phila/phila-ui-link':
-        specifier: 1.1.0-beta.9
-        version: 1.1.0-beta.9(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
       maplibre-gl:
         specifier: ^5.0.0
         version: 5.17.0
@@ -376,26 +373,6 @@ packages:
   '@maplibre/vt-pbf@4.2.1':
     resolution: {integrity: sha512-IxZBGq/+9cqf2qdWlFuQ+ZfoMhWpxDUGQZ/poPHOJBvwMUT1GuxLo6HgYTou+xxtsOsjfbcjI8PZaPCtmt97rA==}
 
-  '@phila/phila-ui-core@3.0.0-beta.9':
-    resolution: {integrity: sha512-j2MOkGk0j/KC8/mwQfaMgvjR/LlbDl8ITZMLQUQlMR6rI4RAJ8f5fzjLckdm2+iT1u4zWwuLQBFFWP3psGdSvA==}
-    peerDependencies:
-      vue: ^3.0.0
-      vue-router: ^4.0.0
-    peerDependenciesMeta:
-      vue-router:
-        optional: true
-
-  '@phila/phila-ui-link@1.1.0-beta.9':
-    resolution: {integrity: sha512-tc7RMQot+kFlKgEKoiCT/qNDVF2vxF5MTj6fhX99LzaF9iIi6w6yNc4IgQrfils5aqV4tEus6v2tQKjR1y7XzQ==}
-    peerDependencies:
-      '@fortawesome/fontawesome-svg-core': ^7.1.0
-      '@fortawesome/vue-fontawesome': ^3.1.2
-      vue: ^3.0.0
-      vue-router: ^4.0.0
-    peerDependenciesMeta:
-      vue-router:
-        optional: true
-
   '@playwright/test@1.58.2':
     resolution: {integrity: sha512-akea+6bHYBBfA9uQqSYmlJXn61cTa+jbO87xVLCWbTqbWadRVmhxlXATaOjOgcBaWU4ePo0wB41KMFv3o35IXA==}
     engines: {node: '>=18'}
@@ -732,10 +709,6 @@ packages:
   chalk@4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
     engines: {node: '>=10'}
-
-  clsx@2.1.1:
-    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
-    engines: {node: '>=6'}
 
   color-convert@2.0.1:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}
@@ -1516,18 +1489,6 @@ snapshots:
       pbf: 4.0.1
       supercluster: 8.0.1
 
-  '@phila/phila-ui-core@3.0.0-beta.9(vue@3.5.27(typescript@5.6.3))':
-    dependencies:
-      clsx: 2.1.1
-      vue: 3.5.27(typescript@5.6.3)
-
-  '@phila/phila-ui-link@1.1.0-beta.9(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))':
-    dependencies:
-      '@fortawesome/fontawesome-svg-core': 7.1.0
-      '@fortawesome/vue-fontawesome': 3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-core': 3.0.0-beta.9(vue@3.5.27(typescript@5.6.3))
-      vue: 3.5.27(typescript@5.6.3)
-
   '@playwright/test@1.58.2':
     dependencies:
       playwright: 1.58.2
@@ -1868,8 +1829,6 @@ snapshots:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
-
-  clsx@2.1.1: {}
 
   color-convert@2.0.1:
     dependencies:
