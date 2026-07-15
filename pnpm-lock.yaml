@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@phila/layerboard': link:../vue3-layerboard
+
 importers:
 
   .:
@@ -21,8 +24,8 @@ importers:
         specifier: ^3.0.0
         version: 3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3))
       '@phila/layerboard':
-        specifier: 3.1.1
-        version: 3.1.1(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/pro-solid-svg-icons@7.2.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(maplibre-gl@5.17.0)(pinia@3.0.4(typescript@5.6.3)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
+        specifier: link:../vue3-layerboard
+        version: link:../vue3-layerboard
       '@phila/phila-ui-link':
         specifier: 1.0.3
         version: 1.0.3(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
@@ -97,19 +100,9 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  '@babel/runtime-corejs3@7.29.2':
-    resolution: {integrity: sha512-Lc94FOD5+0aXhdb0Tdg3RUtqT6yWbI/BbFWvlaSJ3gAb9Ks+99nHRDKADVqC37er4eCB0fHyWT+y+K3QOvJKbw==}
-    engines: {node: '>=6.9.0'}
-
   '@babel/types@7.28.6':
     resolution: {integrity: sha512-0ZrskXVEHSWIqZM/sQZ4EV3jZJXRkio/WCxaqKZP1g//CEWEPSfeZFcms4XeKBCHU0ZKnIkdJeU/kF+eRp5lBg==}
     engines: {node: '>=6.9.0'}
-
-  '@cyclomedia/streetsmart-api@25.7.1':
-    resolution: {integrity: sha512-TmBsV1fr94EyRRJDU6A9B2Cbh7REQ6exIcZlv/kQyzbiFk9/rpSF1UU8SdxUE+ONpC1NvAGGEQaHX85VVle12w==}
-    peerDependencies:
-      react: 18.3.1
-      react-dom: 18.3.1
 
   '@esbuild/aix-ppc64@0.27.2':
     resolution: {integrity: sha512-GZMB+a0mOMZs4MpDbj8RJp4cw+w1WV5NYD6xzgvzUJ5Ek2jerwfO2eADyI6ExDSUED+1X8aMbegahsJi+8mgpw==}
@@ -309,10 +302,6 @@ packages:
     resolution: {integrity: sha512-l/BQM7fYntsCI//du+6sEnHOP6a74UixFyOYUyz2DLMXKx+6DEhfR3F2NYGE45XH1JJuIamacb4IZs9S0ZOWLA==}
     engines: {node: '>=6'}
 
-  '@fortawesome/fontawesome-common-types@7.2.0':
-    resolution: {integrity: sha512-IpR0bER9FY25p+e7BmFH25MZKEwFHTfRAfhOyJubgiDnoJNsSvJ7nigLraHtp4VOG/cy8D7uiV0dLkHOne5Fhw==}
-    engines: {node: '>=6'}
-
   '@fortawesome/fontawesome-svg-core@7.1.0':
     resolution: {integrity: sha512-fNxRUk1KhjSbnbuBxlWSnBLKLBNun52ZBTcs22H/xEEzM6Ap81ZFTQ4bZBxVQGQgVY0xugKGoRcCbaKjLQ3XZA==}
     engines: {node: '>=6'}
@@ -323,10 +312,6 @@ packages:
 
   '@fortawesome/free-solid-svg-icons@7.1.0':
     resolution: {integrity: sha512-Udu3K7SzAo9N013qt7qmm22/wo2hADdheXtBfxFTecp+ogsc0caQNRKEb7pkvvagUGOpG9wJC1ViH6WXs8oXIA==}
-    engines: {node: '>=6'}
-
-  '@fortawesome/pro-solid-svg-icons@7.2.0':
-    resolution: {integrity: sha512-r+YsuG1B+iYcCXNS82bfvRnGJtlRhVI5Xk7vVJ9+ymJU5u4UGGGOSFRV5kRWH2zFItH9PKaIjnN1cXMcgOM/+g==}
     engines: {node: '>=6'}
 
   '@fortawesome/vue-fontawesome@3.1.3':
@@ -391,39 +376,8 @@ packages:
   '@maplibre/vt-pbf@4.2.1':
     resolution: {integrity: sha512-IxZBGq/+9cqf2qdWlFuQ+ZfoMhWpxDUGQZ/poPHOJBvwMUT1GuxLo6HgYTou+xxtsOsjfbcjI8PZaPCtmt97rA==}
 
-  '@phila/layerboard@3.1.1':
-    resolution: {integrity: sha512-gVkpZTg8dto30myf+Z05M8vrl9liV8ThDx12NPamIuQHiXeMEK8DZNB4ewPncl5Vw2DXJU8mRwR4eut8OgG/FA==}
-    engines: {node: ^20.19.0 || >=22.12.0}
-    peerDependencies:
-      maplibre-gl: ^5.0.0
-      pinia: ^3.0.0
-      vue: ^3.5.0
-
-  '@phila/phila-ui-button@2.2.3-beta.3':
-    resolution: {integrity: sha512-JQ3FLqBzknatKjFIhEHIYUvDQG6k/07RoXvKbU4CnBD/M0h5E/u1OX5TE6jSSEUx7d6dkLGeIYZ4rFB7SUvhHg==}
-    peerDependencies:
-      '@fortawesome/fontawesome-svg-core': ^7.1.0
-      '@fortawesome/vue-fontawesome': ^3.1.2
-      vue: ^3.0.0
-
-  '@phila/phila-ui-checkbox@0.1.1-beta.3':
-    resolution: {integrity: sha512-CBEhFJhBfLEIG2+p2FWmL2qt2xlSrKXIjlUaVXtKL7zQsQlUpD4NzKMiibOo09r0l/UPonF9DrBf1ShdEs0S+w==}
-    peerDependencies:
-      vue: ^3.0.0
-
   '@phila/phila-ui-core@2.3.2':
     resolution: {integrity: sha512-93NpRqL0EfNZPjpcLGfkCQf6zzvQ+MwHDgy/UBHDMY8gphl7pGtQaVHsojYsou58DL1vs2QbV4aCalgn66Eg2Q==}
-    peerDependencies:
-      '@fortawesome/fontawesome-svg-core': ^7.1.0
-      '@fortawesome/vue-fontawesome': ^3.1.2
-      vue: ^3.0.0
-      vue-router: ^4.0.0
-    peerDependenciesMeta:
-      vue-router:
-        optional: true
-
-  '@phila/phila-ui-core@2.4.0-beta.2':
-    resolution: {integrity: sha512-YZgw33g9TmluoTDyhYmLLPyFTw9QNFEBlYOz0q/O0gvEGdNkjr8vyNWVml/ugDAHjLLn3VYWD3P2wDmupfNE2Q==}
     peerDependencies:
       '@fortawesome/fontawesome-svg-core': ^7.1.0
       '@fortawesome/vue-fontawesome': ^3.1.2
@@ -443,28 +397,6 @@ packages:
     peerDependenciesMeta:
       vue-router:
         optional: true
-
-  '@phila/phila-ui-map-core@1.1.0-beta.14':
-    resolution: {integrity: sha512-eTUue8TpGk5vhUF3QvY5ho2RO7Ea/nW8pQf9jSHlv9iWihGutOV55kRiB3lplxmcbli5SByHt3xfH9uC9j8hcA==}
-
-  '@phila/phila-ui-search@1.2.0-beta.5':
-    resolution: {integrity: sha512-/YITD86tOWv6udvEgdfulK9n6+xbPDhYmke5QW/CR0o2SRli7BUdftpQTnTYPtqFBrDitYKKkNjowifJ8CTePw==}
-    peerDependencies:
-      '@fortawesome/fontawesome-svg-core': ^7.1.0
-      '@fortawesome/pro-solid-svg-icons': ^7.1.0
-      vue: ^3.0.0
-
-  '@phila/phila-ui-text-field@1.1.3-beta.4':
-    resolution: {integrity: sha512-HPzJK0nb7IjvpJcivEUp6zHYfnO7CXolBwECgVdBAThujlgwyarILuSipVmw6zdJHFOi75Dy9rARLvJ8sk556w==}
-    peerDependencies:
-      '@fortawesome/fontawesome-svg-core': ^7.1.0
-      '@fortawesome/pro-solid-svg-icons': ^7.1.0
-      vue: ^3.0.0
-
-  '@phila/phila-ui-tooltip@0.1.0-beta.3':
-    resolution: {integrity: sha512-QL0sAgwM0rY4XIGNdrzAdeAU7l76Wfl/5EnyZHUJcULXxEsGBengtyD34vEDJ8CPod57um8+69xoNzhdnbp70Q==}
-    peerDependencies:
-      vue: ^3.0.0
 
   '@playwright/test@1.58.2':
     resolution: {integrity: sha512-akea+6bHYBBfA9uQqSYmlJXn61cTa+jbO87xVLCWbTqbWadRVmhxlXATaOjOgcBaWU4ePo0wB41KMFv3o35IXA==}
@@ -615,20 +547,11 @@ packages:
   '@tsconfig/node20@20.1.8':
     resolution: {integrity: sha512-Em+IdPfByIzWRRpqWL4Z7ArLHZGxmc36BxE3jCz9nBFSm+5aLaPMZyjwu4yetvyKXeogWcxik4L1jB5JTWfw7A==}
 
-  '@turf/helpers@7.3.5':
-    resolution: {integrity: sha512-E/NMGV5MwbjjP7AJXBtsanC3yY8N2MQ87IGdIgkB2ji5AtBpwnH4L3gEqpYN4RlCJJWbLbzO91BbKv2waUd0eg==}
-
-  '@types/arcgis-rest-api@10.4.8':
-    resolution: {integrity: sha512-MapiW0nP/5X0BUHmtRNEjbK0xrxS6n0syZWQk25H4ObFFwuK1+pGl7LQfOLgpsVM849WQ1b2sKIvWqEAvPwzCA==}
-
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
 
   '@types/geojson@7946.0.16':
     resolution: {integrity: sha512-6C8nqWur3j98U6+lXDfTUWIfgvZU+EumvpHKcYjujKH7woYyLj2sUmff0tRhrqM7BohUw7Pz3ZB1jj2gW9Fvmg==}
-
-  '@types/gl-matrix@2.4.5':
-    resolution: {integrity: sha512-0L8Mq1+oaIW0oVzGUDbSW+HnTjCNb4CmoIQE5BkoHt/A7x20z0MJ1PnwfH3atty/vbWLGgvJwVu2Mz3SKFiEFw==}
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
@@ -636,17 +559,8 @@ packages:
   '@types/node@20.19.30':
     resolution: {integrity: sha512-WJtwWJu7UdlvzEAUm484QNg5eAoq5QR08KDNx7g45Usrs2NtOPiX8ugDqmKdXkyL03rBqU5dYNYVQetEpBHq2g==}
 
-  '@types/ol@6.5.3':
-    resolution: {integrity: sha512-C0Sm5dytTfRxztYFMuWq0IBJYfMffPF4GzXI/s4ZyJlNZ8AAdS+9fW0iGOyYkTb3ZQmfYWYdAzMqwGXfHVw+3A==}
-
-  '@types/rbush@4.0.0':
-    resolution: {integrity: sha512-+N+2H39P8X+Hy1I5mC6awlTX54k3FhiUmvt7HWzGJZvF+syUAAxP/stwppS8JE84YHqFgRMv6fCy31202CMFxQ==}
-
   '@types/supercluster@7.1.3':
     resolution: {integrity: sha512-Z0pOY34GDFl3Q6hUFYf3HkTwKEE02e7QgtJppBt+beEAxnyOpJua+voGFvxINBHa06GwLFFym7gRPY2SiKIfIA==}
-
-  '@types/topojson-specification@1.0.5':
-    resolution: {integrity: sha512-C7KvcQh+C2nr6Y2Ub4YfgvWvWCgP2nOQMtfhlnwsRL4pYmmwzBS7HclGiS87eQfDOU/DLQpX6GEscviaz4yLIQ==}
 
   '@typescript-eslint/eslint-plugin@8.55.0':
     resolution: {integrity: sha512-1y/MVSz0NglV1ijHC8OT49mPJ4qhPYjiK08YUQVbIOyu+5k862LKUHFkpKHWu//zmr7hDR2rhwUm6gnCGNmGBQ==}
@@ -839,9 +753,6 @@ packages:
     resolution: {integrity: sha512-7Vv6asjS4gMOuILabD3l739tsaxFQmC+a7pLZm02zyvs8p977bL3zEgq3yDk5rn9B0PbYgIv++jmHcuUab4RhA==}
     engines: {node: '>=18'}
 
-  core-js-pure@3.49.0:
-    resolution: {integrity: sha512-XM4RFka59xATyJv/cS3O3Kml72hQXUeGRuuTmMYFxwzc9/7C8OYTaIR/Ji+Yt8DXzsFLNhat15cE/JP15HrCgw==}
-
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
@@ -1031,10 +942,6 @@ packages:
     resolution: {integrity: sha512-Hs59xBNfUIunMFgWAbGX5cq6893IbWg4KnrjbYwX3tx0ztorVgTDA6B2sxf8ejHJ4wz8BqGUMYlnzNBer5NvGg==}
     engines: {node: '>= 4'}
 
-  imask@7.6.1:
-    resolution: {integrity: sha512-sJlIFM7eathUEMChTh9Mrfw/IgiWgJqBKq2VNbyXvBZ7ev/IlO6/KQTKlV/Fm+viQMLrFLG/zCuudrLIwgK2dg==}
-    engines: {npm: '>=4.0.0'}
-
   import-fresh@3.3.1:
     resolution: {integrity: sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ==}
     engines: {node: '>=6'}
@@ -1057,9 +964,6 @@ packages:
 
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
-
-  js-tokens@4.0.0:
-    resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
   js-yaml@4.1.1:
     resolution: {integrity: sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==}
@@ -1093,10 +997,6 @@ packages:
 
   lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
-
-  loose-envify@1.4.0:
-    resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
-    hasBin: true
 
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
@@ -1169,9 +1069,6 @@ packages:
     resolution: {integrity: sha512-SuLdBvS42z33m8ejRbInMapQe8n0D3vN/Xd5fmWM3tufNgRQFBpaW2YVJxQZV4iPNqb0vEFvssMEo5w9c6BTIA==}
     hasBin: true
 
-  pepjs@0.5.3:
-    resolution: {integrity: sha512-5yHVB9OHqKd9fr/OIsn8ss0NgThQ9buaqrEuwr9Or5YjPp6h+WTDKWZI+xZLaBGZCtODTnFtlSHNmhFsq67THg==}
-
   perfect-debounce@1.0.0:
     resolution: {integrity: sha512-xCy9V055GLEqoFaHoC1SoLIaLmWctgCUaBaWxDZ7/Zx4CTyX7cJQLJOok/orfjZAh9kEYpjJa4d0KcJmCbctZA==}
 
@@ -1231,15 +1128,6 @@ packages:
   quickselect@3.0.0:
     resolution: {integrity: sha512-XdjUArbK4Bm5fLLvlm5KpTFOiOThgfWWI4axAZDWg4E/0mKdZyI9tNEfds27qCi1ze/vwTR16kvmmGhRra3c2g==}
 
-  react-dom@18.3.1:
-    resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
-    peerDependencies:
-      react: ^18.3.1
-
-  react@18.3.1:
-    resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
-    engines: {node: '>=0.10.0'}
-
   resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
     engines: {node: '>=4'}
@@ -1257,9 +1145,6 @@ packages:
 
   rw@1.3.3:
     resolution: {integrity: sha512-PdhdWy89SiZogBLaw42zdeqtRJ//zFd2PgQavcICDUgJT5oW10QCRKbJ6bg4r0/UY2M6BWd5tkxuGFRvCkgfHQ==}
-
-  scheduler@0.23.2:
-    resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
 
   semver@7.7.4:
     resolution: {integrity: sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==}
@@ -1309,9 +1194,6 @@ packages:
     engines: {node: '>=18.12'}
     peerDependencies:
       typescript: '>=4.8.4'
-
-  tslib@2.8.1:
-    resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
@@ -1381,27 +1263,11 @@ packages:
   vscode-uri@3.1.0:
     resolution: {integrity: sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ==}
 
-  vue-demi@0.14.10:
-    resolution: {integrity: sha512-nMZBOwuzabUO0nLgIcc6rycZEebF6eeUfaiQx9+WSk8e29IbLvPU9feI6tqW4kTo3hvoYAJkMh8n8D0fuISphg==}
-    engines: {node: '>=12'}
-    hasBin: true
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-rc.1
-      vue: ^3.0.0-0 || ^2.6.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-
   vue-eslint-parser@10.2.0:
     resolution: {integrity: sha512-CydUvFOQKD928UzZhTp4pr2vWz1L+H99t7Pkln2QSPdvmURT0MoC4wUccfCnuEaihNsu9aYYyk+bep8rlfkUXw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
-
-  vue-imask@7.6.1:
-    resolution: {integrity: sha512-/5ZVNerI9Dn6gZ/cSCYGiZK4JHdwsEBgHBTRpVwS2U0URxK/Jt5FlQuoL1DhbxC6t4ElcVMWYOvkE2hR8hdt1w==}
-    peerDependencies:
-      vue: '>=2.7'
 
   vue-tsc@2.2.12:
     resolution: {integrity: sha512-P7OP77b2h/Pmk+lZdJ0YWs+5tJ6J2+uOQPo7tlBnY44QqQSPYvS0qVT4wqDJgwrZaLe47etJLLQRFia71GYITw==}
@@ -1444,21 +1310,10 @@ snapshots:
     dependencies:
       '@babel/types': 7.28.6
 
-  '@babel/runtime-corejs3@7.29.2':
-    dependencies:
-      core-js-pure: 3.49.0
-
   '@babel/types@7.28.6':
     dependencies:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
-
-  '@cyclomedia/streetsmart-api@25.7.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@types/gl-matrix': 2.4.5
-      '@types/ol': 6.5.3
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
 
   '@esbuild/aix-ppc64@0.27.2':
     optional: true
@@ -1586,8 +1441,6 @@ snapshots:
 
   '@fortawesome/fontawesome-common-types@7.1.0': {}
 
-  '@fortawesome/fontawesome-common-types@7.2.0': {}
-
   '@fortawesome/fontawesome-svg-core@7.1.0':
     dependencies:
       '@fortawesome/fontawesome-common-types': 7.1.0
@@ -1599,10 +1452,6 @@ snapshots:
   '@fortawesome/free-solid-svg-icons@7.1.0':
     dependencies:
       '@fortawesome/fontawesome-common-types': 7.1.0
-
-  '@fortawesome/pro-solid-svg-icons@7.2.0':
-    dependencies:
-      '@fortawesome/fontawesome-common-types': 7.2.0
 
   '@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3))':
     dependencies:
@@ -1669,49 +1518,7 @@ snapshots:
       pbf: 4.0.1
       supercluster: 8.0.1
 
-  '@phila/layerboard@3.1.1(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/pro-solid-svg-icons@7.2.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(maplibre-gl@5.17.0)(pinia@3.0.4(typescript@5.6.3)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))':
-    dependencies:
-      '@phila/phila-ui-core': 2.4.0-beta.2(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-link': 1.0.3(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-map-core': 1.1.0-beta.14(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/pro-solid-svg-icons@7.2.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-search': 1.2.0-beta.5(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/pro-solid-svg-icons@7.2.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-text-field': 1.1.3-beta.4(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/pro-solid-svg-icons@7.2.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      maplibre-gl: 5.17.0
-      pinia: 3.0.4(typescript@5.6.3)(vue@3.5.27(typescript@5.6.3))
-      vue: 3.5.27(typescript@5.6.3)
-    transitivePeerDependencies:
-      - '@fortawesome/fontawesome-svg-core'
-      - '@fortawesome/pro-solid-svg-icons'
-      - '@fortawesome/vue-fontawesome'
-      - '@vue/composition-api'
-      - vue-router
-
-  '@phila/phila-ui-button@2.2.3-beta.3(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))':
-    dependencies:
-      '@fortawesome/fontawesome-svg-core': 7.1.0
-      '@fortawesome/vue-fontawesome': 3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-core': 2.4.0-beta.2(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      vue: 3.5.27(typescript@5.6.3)
-    transitivePeerDependencies:
-      - vue-router
-
-  '@phila/phila-ui-checkbox@0.1.1-beta.3(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))':
-    dependencies:
-      '@phila/phila-ui-core': 2.4.0-beta.2(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      vue: 3.5.27(typescript@5.6.3)
-    transitivePeerDependencies:
-      - '@fortawesome/fontawesome-svg-core'
-      - '@fortawesome/vue-fontawesome'
-      - vue-router
-
   '@phila/phila-ui-core@2.3.2(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))':
-    dependencies:
-      '@fortawesome/fontawesome-svg-core': 7.1.0
-      '@fortawesome/vue-fontawesome': 3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3))
-      clsx: 2.1.1
-      vue: 3.5.27(typescript@5.6.3)
-
-  '@phila/phila-ui-core@2.4.0-beta.2(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))':
     dependencies:
       '@fortawesome/fontawesome-svg-core': 7.1.0
       '@fortawesome/vue-fontawesome': 3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3))
@@ -1724,64 +1531,6 @@ snapshots:
       '@fortawesome/vue-fontawesome': 3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3))
       '@phila/phila-ui-core': 2.3.2(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
       vue: 3.5.27(typescript@5.6.3)
-
-  '@phila/phila-ui-map-core@1.1.0-beta.14(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/pro-solid-svg-icons@7.2.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))':
-    dependencies:
-      '@cyclomedia/streetsmart-api': 25.7.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@phila/phila-ui-checkbox': 0.1.1-beta.3(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-core': 2.4.0-beta.2(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-search': 1.2.0-beta.5(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/pro-solid-svg-icons@7.2.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-tooltip': 0.1.0-beta.3(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      '@turf/helpers': 7.3.5
-      clsx: 2.1.1
-      maplibre-gl: 5.17.0
-      pepjs: 0.5.3
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-    transitivePeerDependencies:
-      - '@fortawesome/fontawesome-svg-core'
-      - '@fortawesome/pro-solid-svg-icons'
-      - '@fortawesome/vue-fontawesome'
-      - '@vue/composition-api'
-      - vue
-      - vue-router
-
-  '@phila/phila-ui-search@1.2.0-beta.5(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/pro-solid-svg-icons@7.2.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))':
-    dependencies:
-      '@fortawesome/fontawesome-svg-core': 7.1.0
-      '@fortawesome/pro-solid-svg-icons': 7.2.0
-      '@phila/phila-ui-button': 2.2.3-beta.3(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-core': 2.4.0-beta.2(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-text-field': 1.1.3-beta.4(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/pro-solid-svg-icons@7.2.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      vue: 3.5.27(typescript@5.6.3)
-    transitivePeerDependencies:
-      - '@fortawesome/vue-fontawesome'
-      - '@vue/composition-api'
-      - vue-router
-
-  '@phila/phila-ui-text-field@1.1.3-beta.4(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/pro-solid-svg-icons@7.2.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))':
-    dependencies:
-      '@fortawesome/fontawesome-svg-core': 7.1.0
-      '@fortawesome/pro-solid-svg-icons': 7.2.0
-      '@phila/phila-ui-button': 2.2.3-beta.3(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-core': 2.4.0-beta.2(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      vue: 3.5.27(typescript@5.6.3)
-      vue-imask: 7.6.1(vue@3.5.27(typescript@5.6.3))
-    transitivePeerDependencies:
-      - '@fortawesome/vue-fontawesome'
-      - '@vue/composition-api'
-      - vue-router
-
-  '@phila/phila-ui-tooltip@0.1.0-beta.3(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))':
-    dependencies:
-      '@fortawesome/pro-solid-svg-icons': 7.2.0
-      '@phila/phila-ui-button': 2.2.3-beta.3(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-core': 2.4.0-beta.2(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      vue: 3.5.27(typescript@5.6.3)
-    transitivePeerDependencies:
-      - '@fortawesome/fontawesome-svg-core'
-      - '@fortawesome/vue-fontawesome'
-      - vue-router
 
   '@playwright/test@1.58.2':
     dependencies:
@@ -1866,18 +1615,9 @@ snapshots:
 
   '@tsconfig/node20@20.1.8': {}
 
-  '@turf/helpers@7.3.5':
-    dependencies:
-      '@types/geojson': 7946.0.16
-      tslib: 2.8.1
-
-  '@types/arcgis-rest-api@10.4.8': {}
-
   '@types/estree@1.0.8': {}
 
   '@types/geojson@7946.0.16': {}
-
-  '@types/gl-matrix@2.4.5': {}
 
   '@types/json-schema@7.0.15': {}
 
@@ -1885,20 +1625,7 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
-  '@types/ol@6.5.3':
-    dependencies:
-      '@types/arcgis-rest-api': 10.4.8
-      '@types/geojson': 7946.0.16
-      '@types/rbush': 4.0.0
-      '@types/topojson-specification': 1.0.5
-
-  '@types/rbush@4.0.0': {}
-
   '@types/supercluster@7.1.3':
-    dependencies:
-      '@types/geojson': 7946.0.16
-
-  '@types/topojson-specification@1.0.5':
     dependencies:
       '@types/geojson': 7946.0.16
 
@@ -2160,8 +1887,6 @@ snapshots:
     dependencies:
       is-what: 5.5.0
 
-  core-js-pure@3.49.0: {}
-
   cross-spawn@7.0.6:
     dependencies:
       path-key: 3.1.1
@@ -2354,10 +2079,6 @@ snapshots:
 
   ignore@7.0.5: {}
 
-  imask@7.6.1:
-    dependencies:
-      '@babel/runtime-corejs3': 7.29.2
-
   import-fresh@3.3.1:
     dependencies:
       parent-module: 1.0.1
@@ -2374,8 +2095,6 @@ snapshots:
   is-what@5.5.0: {}
 
   isexe@2.0.0: {}
-
-  js-tokens@4.0.0: {}
 
   js-yaml@4.1.1:
     dependencies:
@@ -2405,10 +2124,6 @@ snapshots:
       p-locate: 5.0.0
 
   lodash.merge@4.6.2: {}
-
-  loose-envify@1.4.0:
-    dependencies:
-      js-tokens: 4.0.0
 
   magic-string@0.30.21:
     dependencies:
@@ -2496,8 +2211,6 @@ snapshots:
     dependencies:
       resolve-protobuf-schema: 2.1.0
 
-  pepjs@0.5.3: {}
-
   perfect-debounce@1.0.0: {}
 
   picocolors@1.1.1: {}
@@ -2542,16 +2255,6 @@ snapshots:
 
   quickselect@3.0.0: {}
 
-  react-dom@18.3.1(react@18.3.1):
-    dependencies:
-      loose-envify: 1.4.0
-      react: 18.3.1
-      scheduler: 0.23.2
-
-  react@18.3.1:
-    dependencies:
-      loose-envify: 1.4.0
-
   resolve-from@4.0.0: {}
 
   resolve-protobuf-schema@2.1.0:
@@ -2593,10 +2296,6 @@ snapshots:
 
   rw@1.3.3: {}
 
-  scheduler@0.23.2:
-    dependencies:
-      loose-envify: 1.4.0
-
   semver@7.7.4: {}
 
   shebang-command@2.0.0:
@@ -2633,8 +2332,6 @@ snapshots:
   ts-api-utils@2.4.0(typescript@5.6.3):
     dependencies:
       typescript: 5.6.3
-
-  tslib@2.8.1: {}
 
   type-check@0.4.0:
     dependencies:
@@ -2675,10 +2372,6 @@ snapshots:
 
   vscode-uri@3.1.0: {}
 
-  vue-demi@0.14.10(vue@3.5.27(typescript@5.6.3)):
-    dependencies:
-      vue: 3.5.27(typescript@5.6.3)
-
   vue-eslint-parser@10.2.0(eslint@9.39.2):
     dependencies:
       debug: 4.4.3
@@ -2690,14 +2383,6 @@ snapshots:
       semver: 7.7.4
     transitivePeerDependencies:
       - supports-color
-
-  vue-imask@7.6.1(vue@3.5.27(typescript@5.6.3)):
-    dependencies:
-      imask: 7.6.1
-      vue: 3.5.27(typescript@5.6.3)
-      vue-demi: 0.14.10(vue@3.5.27(typescript@5.6.3))
-    transitivePeerDependencies:
-      - '@vue/composition-api'
 
   vue-tsc@2.2.12(typescript@5.6.3):
     dependencies:
