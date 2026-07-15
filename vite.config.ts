@@ -12,6 +12,9 @@ export default defineConfig({
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
+    // The linked @phila/layerboard checkout resolves these from its own
+    // node_modules, which would load a second instance of each.
+    dedupe: ["vue", "pinia"],
   },
   server: {
     port: 5173,
