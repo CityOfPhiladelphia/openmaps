@@ -10,7 +10,6 @@
 import { Layerboard } from "@phila/layerboard";
 import type { CyclomediaConfig, PictometryCredentials } from "@phila/layerboard";
 import HelpModal from "./components/HelpModal.vue";
-import { PhilaLink } from "@phila/phila-ui-link";
 
 // WebMap ID for OpenMaps
 const WEBMAP_ID = "1596df70df0349e293ceec46a06ccc50";
@@ -46,12 +45,13 @@ const pictometryCredentials: PictometryCredentials = {
     <template #footer="{ openModal }">
       <a href="#" class="footer-link" @click.prevent="openModal">Help</a>
       <span class="footer-separator">|</span>
-      <PhilaLink
-        text="Feedback"
+      <a
         href="https://phila.formstack.com/forms/openmaps_feedback"
+        class="footer-link"
         target="_blank"
-        variant="on-primary"
-      />
+        rel="noopener noreferrer"
+        >Feedback</a
+      >
     </template>
 
     <template #modal>
