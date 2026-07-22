@@ -21,8 +21,8 @@ importers:
         specifier: ^3.0.0
         version: 3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3))
       '@phila/layerboard':
-        specifier: 3.2.1
-        version: 3.2.1(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(maplibre-gl@5.17.0)(pinia@3.0.4(typescript@5.6.3)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
+        specifier: 3.2.2
+        version: 3.2.2(maplibre-gl@5.17.0)(pinia@3.0.4(typescript@5.6.3)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
       maplibre-gl:
         specifier: ^5.0.0
         version: 5.17.0
@@ -380,28 +380,26 @@ packages:
   '@maplibre/vt-pbf@4.2.1':
     resolution: {integrity: sha512-IxZBGq/+9cqf2qdWlFuQ+ZfoMhWpxDUGQZ/poPHOJBvwMUT1GuxLo6HgYTou+xxtsOsjfbcjI8PZaPCtmt97rA==}
 
-  '@phila/layerboard@3.2.1':
-    resolution: {integrity: sha512-WA3mpxvjTMo4LcwbYXxnWgU6j+0nsY4oWhvxSDUCAYDW8U/rFBtam1QDYLTLer60kKElZ+3nmnJvFHUkBEFwrw==}
+  '@phila/layerboard@3.2.2':
+    resolution: {integrity: sha512-mcum4RarSW0X8NZe7qIDxGu7XYNtHEia2/7a4pUbyw6jEU2+9yjtDLZ22lvew75CxaUK2l7Rf2hextdnUjwfjQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
       maplibre-gl: ^5.0.0
       pinia: ^3.0.0
       vue: ^3.5.0
 
-  '@phila/phila-ui-button@2.3.0-beta.10':
-    resolution: {integrity: sha512-/wEU/SZtSnxEtBzmwLcXUHLewp6SnpPh1id3qZERpbCeAcUvQP+dHsqzdKM2THiFLYdtLigOz6HmtbSF+YHRkg==}
-    peerDependencies:
-      '@fortawesome/fontawesome-svg-core': ^7.1.0
-      '@fortawesome/vue-fontawesome': ^3.1.2
-      vue: ^3.0.0
-
-  '@phila/phila-ui-checkbox@1.0.0-beta.12':
-    resolution: {integrity: sha512-fsDDAfEdwwS9cBUxx+aCdPPTzMKMK0tGXZKuxMwoInQ5iig4TazLSkxFLrI/dT7UKWTE6YFUCQd8W3MQAf8W2A==}
+  '@phila/phila-ui-button@2.3.1-beta.0':
+    resolution: {integrity: sha512-Y1BBTnfgt0x2WEBVmgXKdL8eyAR2XMAMT4hug+2PU/lbDrwrye/KZJPh9S3ULPp+yRM/VHqJct95yArLJShORg==}
     peerDependencies:
       vue: ^3.0.0
 
-  '@phila/phila-ui-core@3.0.0-beta.9':
-    resolution: {integrity: sha512-j2MOkGk0j/KC8/mwQfaMgvjR/LlbDl8ITZMLQUQlMR6rI4RAJ8f5fzjLckdm2+iT1u4zWwuLQBFFWP3psGdSvA==}
+  '@phila/phila-ui-checkbox@1.0.1-beta.0':
+    resolution: {integrity: sha512-N/o6ANg6fpVjHlfRaHMWNqX3JmYBtPIPNQTbdKJpqTPPCb3wHt32+JNWwCK6mieVdJ32+BlkaI+ubd5EX1f0Nw==}
+    peerDependencies:
+      vue: ^3.0.0
+
+  '@phila/phila-ui-core@3.0.1-beta.0':
+    resolution: {integrity: sha512-kfoZTOBajyPD9gihRXh11qz5SkQAzsBjWtP6gP9863JMQynpmiuaSAzFtvtnHsf3QkE5E1JS5MgGvMAlg8vgFA==}
     peerDependencies:
       vue: ^3.0.0
       vue-router: ^4.0.0
@@ -409,21 +407,21 @@ packages:
       vue-router:
         optional: true
 
-  '@phila/phila-ui-map-core@1.1.0-beta.26':
-    resolution: {integrity: sha512-VrW2VAHIXucE+KbDwJEuaZpvXeEJh7pvZU4dgLH2hIwsKSlpoDnwJI4fu9yNUXwVi+6IkmWQeFC/YrMJJkWcJA==}
+  '@phila/phila-ui-map-core@1.2.0-beta.1':
+    resolution: {integrity: sha512-rCaD3hlBV4cLHuk1U58CV/UFjLvj2I0B3hIONjUFWeSatoy/UqRAovNXfqUVWH+yVLjBRg8VPsDxmW6w+ZXnJw==}
 
-  '@phila/phila-ui-search@1.2.0-beta.12':
-    resolution: {integrity: sha512-8RhhSQDfxFSI86/NKTK4RUBeIuPiibC69CformpTftRZT8GbopRHGCP3DHx1BCy3JFjHbs0RKJ5Xrv1+9CMGbg==}
+  '@phila/phila-ui-search@1.2.1-beta.0':
+    resolution: {integrity: sha512-sM3o7SG1o8ujfSeoJa37tvTLzrSLEeowh6bTrn5MUREBxY849VKejHt6o6kps8Q6zb1OZjxbQlm1mAN/SYiNnA==}
     peerDependencies:
       vue: ^3.0.0
 
-  '@phila/phila-ui-text-field@1.2.0-beta.11':
-    resolution: {integrity: sha512-427WNUwGSSFlJ7XH1R4+HDRXtgTsYa41iaExz58mUeMLSvtcLUm1gk0ouzHtRGr6mZp+dNteil34DA/hZ6UVnQ==}
+  '@phila/phila-ui-text-field@1.2.1-beta.0':
+    resolution: {integrity: sha512-Bl4pRXppbOylFzfFcaZ6NOb/khSHRThDkAICFLLMuZwugcH3vSmfoCMoliHf+JLYbqCxyLYCKulNOh0WvA4hpw==}
     peerDependencies:
       vue: ^3.0.0
 
-  '@phila/phila-ui-tooltip@0.1.0-beta.12':
-    resolution: {integrity: sha512-Vb39/s/e9Rnow27aBnOBUxbU3gm+m/UwkHj9OuuZRLIPXo9ARP5Eu31iQehF8F+tGzubOkeog+3RTBWzNy+Fzg==}
+  '@phila/phila-ui-tooltip@0.1.1-beta.0':
+    resolution: {integrity: sha512-Xtqu8YkHXigxekJZN/gGxKuBeXldsthsI5Kc4jik0/TV+Zaf5PaYNRTVHWKXAv5uQudWOhC+FTY39J9rktmFOA==}
     peerDependencies:
       vue: ^3.0.0
 
@@ -1624,51 +1622,45 @@ snapshots:
       pbf: 4.0.1
       supercluster: 8.0.1
 
-  '@phila/layerboard@3.2.1(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(maplibre-gl@5.17.0)(pinia@3.0.4(typescript@5.6.3)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))':
+  '@phila/layerboard@3.2.2(maplibre-gl@5.17.0)(pinia@3.0.4(typescript@5.6.3)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))':
     dependencies:
-      '@phila/phila-ui-core': 3.0.0-beta.9(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-map-core': 1.1.0-beta.26(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-text-field': 1.2.0-beta.11(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
+      '@phila/phila-ui-core': 3.0.1-beta.0(vue@3.5.27(typescript@5.6.3))
+      '@phila/phila-ui-map-core': 1.2.0-beta.1(vue@3.5.27(typescript@5.6.3))
+      '@phila/phila-ui-text-field': 1.2.1-beta.0(vue@3.5.27(typescript@5.6.3))
       maplibre-gl: 5.17.0
       pinia: 3.0.4(typescript@5.6.3)(vue@3.5.27(typescript@5.6.3))
       vue: 3.5.27(typescript@5.6.3)
     transitivePeerDependencies:
-      - '@fortawesome/fontawesome-svg-core'
-      - '@fortawesome/vue-fontawesome'
       - '@vue/composition-api'
       - vue-router
 
-  '@phila/phila-ui-button@2.3.0-beta.10(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))':
+  '@phila/phila-ui-button@2.3.1-beta.0(vue@3.5.27(typescript@5.6.3))':
     dependencies:
-      '@fortawesome/fontawesome-svg-core': 7.1.0
-      '@fortawesome/vue-fontawesome': 3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-core': 3.0.0-beta.9(vue@3.5.27(typescript@5.6.3))
+      '@phila/phila-ui-core': 3.0.1-beta.0(vue@3.5.27(typescript@5.6.3))
       vue: 3.5.27(typescript@5.6.3)
     transitivePeerDependencies:
       - vue-router
 
-  '@phila/phila-ui-checkbox@1.0.0-beta.12(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))':
+  '@phila/phila-ui-checkbox@1.0.1-beta.0(vue@3.5.27(typescript@5.6.3))':
     dependencies:
-      '@phila/phila-ui-core': 3.0.0-beta.9(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-tooltip': 0.1.0-beta.12(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
+      '@phila/phila-ui-core': 3.0.1-beta.0(vue@3.5.27(typescript@5.6.3))
+      '@phila/phila-ui-tooltip': 0.1.1-beta.0(vue@3.5.27(typescript@5.6.3))
       vue: 3.5.27(typescript@5.6.3)
     transitivePeerDependencies:
-      - '@fortawesome/fontawesome-svg-core'
-      - '@fortawesome/vue-fontawesome'
       - vue-router
 
-  '@phila/phila-ui-core@3.0.0-beta.9(vue@3.5.27(typescript@5.6.3))':
+  '@phila/phila-ui-core@3.0.1-beta.0(vue@3.5.27(typescript@5.6.3))':
     dependencies:
       clsx: 2.1.1
       vue: 3.5.27(typescript@5.6.3)
 
-  '@phila/phila-ui-map-core@1.1.0-beta.26(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))':
+  '@phila/phila-ui-map-core@1.2.0-beta.1(vue@3.5.27(typescript@5.6.3))':
     dependencies:
       '@cyclomedia/streetsmart-api': 25.7.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@phila/phila-ui-checkbox': 1.0.0-beta.12(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-core': 3.0.0-beta.9(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-search': 1.2.0-beta.12(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-tooltip': 0.1.0-beta.12(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
+      '@phila/phila-ui-checkbox': 1.0.1-beta.0(vue@3.5.27(typescript@5.6.3))
+      '@phila/phila-ui-core': 3.0.1-beta.0(vue@3.5.27(typescript@5.6.3))
+      '@phila/phila-ui-search': 1.2.1-beta.0(vue@3.5.27(typescript@5.6.3))
+      '@phila/phila-ui-tooltip': 0.1.1-beta.0(vue@3.5.27(typescript@5.6.3))
       '@turf/helpers': 7.3.5
       clsx: 2.1.1
       maplibre-gl: 5.17.0
@@ -1676,44 +1668,36 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
-      - '@fortawesome/fontawesome-svg-core'
-      - '@fortawesome/vue-fontawesome'
       - '@vue/composition-api'
       - vue
       - vue-router
 
-  '@phila/phila-ui-search@1.2.0-beta.12(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))':
+  '@phila/phila-ui-search@1.2.1-beta.0(vue@3.5.27(typescript@5.6.3))':
     dependencies:
-      '@phila/phila-ui-button': 2.3.0-beta.10(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-core': 3.0.0-beta.9(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-text-field': 1.2.0-beta.11(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
+      '@phila/phila-ui-button': 2.3.1-beta.0(vue@3.5.27(typescript@5.6.3))
+      '@phila/phila-ui-core': 3.0.1-beta.0(vue@3.5.27(typescript@5.6.3))
+      '@phila/phila-ui-text-field': 1.2.1-beta.0(vue@3.5.27(typescript@5.6.3))
       vue: 3.5.27(typescript@5.6.3)
     transitivePeerDependencies:
-      - '@fortawesome/fontawesome-svg-core'
-      - '@fortawesome/vue-fontawesome'
       - '@vue/composition-api'
       - vue-router
 
-  '@phila/phila-ui-text-field@1.2.0-beta.11(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))':
+  '@phila/phila-ui-text-field@1.2.1-beta.0(vue@3.5.27(typescript@5.6.3))':
     dependencies:
-      '@phila/phila-ui-button': 2.3.0-beta.10(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-core': 3.0.0-beta.9(vue@3.5.27(typescript@5.6.3))
+      '@phila/phila-ui-button': 2.3.1-beta.0(vue@3.5.27(typescript@5.6.3))
+      '@phila/phila-ui-core': 3.0.1-beta.0(vue@3.5.27(typescript@5.6.3))
       vue: 3.5.27(typescript@5.6.3)
       vue-imask: 7.6.1(vue@3.5.27(typescript@5.6.3))
     transitivePeerDependencies:
-      - '@fortawesome/fontawesome-svg-core'
-      - '@fortawesome/vue-fontawesome'
       - '@vue/composition-api'
       - vue-router
 
-  '@phila/phila-ui-tooltip@0.1.0-beta.12(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))':
+  '@phila/phila-ui-tooltip@0.1.1-beta.0(vue@3.5.27(typescript@5.6.3))':
     dependencies:
-      '@phila/phila-ui-button': 2.3.0-beta.10(@fortawesome/fontawesome-svg-core@7.1.0)(@fortawesome/vue-fontawesome@3.1.3(@fortawesome/fontawesome-svg-core@7.1.0)(vue@3.5.27(typescript@5.6.3)))(vue@3.5.27(typescript@5.6.3))
-      '@phila/phila-ui-core': 3.0.0-beta.9(vue@3.5.27(typescript@5.6.3))
+      '@phila/phila-ui-button': 2.3.1-beta.0(vue@3.5.27(typescript@5.6.3))
+      '@phila/phila-ui-core': 3.0.1-beta.0(vue@3.5.27(typescript@5.6.3))
       vue: 3.5.27(typescript@5.6.3)
     transitivePeerDependencies:
-      - '@fortawesome/fontawesome-svg-core'
-      - '@fortawesome/vue-fontawesome'
       - vue-router
 
   '@playwright/test@1.58.2':
