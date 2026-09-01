@@ -8,6 +8,12 @@ export default defineConfig({
     outDir: "dist",
     emptyOutDir: true,
   },
+  // StreetSmart is only imported inside map-core's lazy Cyclomedia chunk, so
+  // the dev server doesn't discover it in the initial scan; prebundling it
+  // upfront avoids a mid-session re-optimize (504 Outdated Optimize Dep).
+  optimizeDeps: {
+    include: ["@cyclomedia/streetsmart-api"],
+  },
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
